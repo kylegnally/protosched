@@ -11,6 +11,10 @@ namespace protosched
         private IMove[] moves;
         private int collectionPosition;
 
-        
+        GenericStack<IMove> aWowStack = new GenericStack<IMove>();
+        GenericStack<IMove> aVisStack = new GenericStack<IMove>();
+        GenericStack<IMove> aBoardStack = new GenericStack<IMove>();
+        GenericStack<IMove> aMiscStack = new GenericStack<IMove>();
+
     }
 }
