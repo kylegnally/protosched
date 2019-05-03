@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,32 +13,38 @@ namespace protosched
         private string BuildingName;
         private string FromRoom;
         private string ToRoom;
-        private DateTime MoveFrom;
-        private DateTime MoveTo;
-        private DateTime NeededFrom;
-        private DateTime NeededTo;
+
+        private DateTime MoveTimeFrom { get; set; }
+        private DateTime MoveTimeTo { get; set; }
+        private DateTime NeededTimeFrom { get; set; }
+        private DateTime NeededTimeTo { get; set; }
+
+        protected Move(string buildingName, 
+            string fromRoom,
+            string toRoom, 
+            DateTime moveTimeFrom, 
+            DateTime moveTimeTo, 
+            DateTime neededTimeFrom, 
+            DateTime neededTimeTo
+            )
+        {
+            this.BuildingName = buildingName;
+            this.MoveTimeFrom = moveTimeFrom;
+            this.MoveTimeTo = moveTimeTo;
+            this.FromRoom = fromRoom;
+            this.ToRoom = toRoom;
+            this.NeededTimeFrom = neededTimeFrom;
+            this.NeededTimeTo = neededTimeTo;
+        }
+
+        public int CompareTo(object move)
+        {
+            if (move is IMove otherMove)
+                return this.MoveTimeFrom.CompareTo(otherMove.MoveTimeFrom);
+            else
+                throw new ArgumentException("Object is not a Move");
+        }
+
+        public abstract void CalculateOrder();
     }
-
-    protected Move(DateTime moveFrom,
-    DateTime moveto)
-    {
-
-    }
-
-    public int CalculateOrder(object move)
-    {
-        if (move is IMove otherMove)
-            return this.TotalCost.CompareTo(otherMove.TotalCost);
-        else
-            throw new ArgumentException("Object is not a Move");
-    }
-
-    ///// <summary>
-    ///// returns the basic droid information when called from any child class.
-    ///// </summary>
-    ///// <returns></returns>
-    //public override string ToString()
-    //{
-    //    return TotalCost.ToString("C") + " " + Color + " " + Material + " " + Name + " ";
-    //}
 }

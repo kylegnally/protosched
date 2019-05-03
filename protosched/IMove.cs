@@ -12,6 +12,6 @@ namespace protosched
         void CalculateOrder();
 
         // property to hold this move's order
-        int GetOrder { get; set; }
+        DateTime MoveTimeFrom { get; set; }
     }
 }
