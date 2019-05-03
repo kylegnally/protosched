@@ -14,7 +14,8 @@ namespace protosched
         private string FromRoom;
         private string ToRoom;
 
-        private DateTime MoveTimeFrom { get; set; }
+        public DateTime MoveTimeFrom { get; set; }
+        public abstract int MoveOrderNumber { get; set; }
         private DateTime MoveTimeTo { get; set; }
         private DateTime NeededTimeFrom { get; set; }
         private DateTime NeededTimeTo { get; set; }
@@ -37,14 +38,29 @@ namespace protosched
             this.NeededTimeTo = neededTimeTo;
         }
 
+        public override string ToString()
+        {
+            return BuildingName + " " +
+                   FromRoom + " TO " +
+                   ToRoom + " @" +
+                   MoveTimeFrom + "-" +
+                   MoveTimeTo + " NEEDED @" +
+                   NeededTimeFrom + "-" +
+                   NeededTimeTo;
+        }
+
         public int CompareTo(object move)
         {
             if (move is IMove otherMove)
+
+                // Code for finding the total time available for the move
+
+
                 return this.MoveTimeFrom.CompareTo(otherMove.MoveTimeFrom);
             else
                 throw new ArgumentException("Object is not a Move");
         }
 
-        public abstract void CalculateOrder();
+        public abstract void CalculateMoveOrder();
     }
 }

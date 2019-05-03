@@ -9,7 +9,7 @@ namespace protosched
     interface IMove : IComparable
     {
         // method to calculate the order this move is in the list (should be elsewhere?)
-        void CalculateOrder();
+        void CalculateMoveOrder();
 
         // property to hold this move's order
         DateTime MoveTimeFrom { get; set; }
