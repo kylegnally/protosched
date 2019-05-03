@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
-    class MoveCollection : IMoveCollection
+    interface IGenericStack<T>
     {
-        private IMove[] moves;
-        private int collectionPosition;
+        void Push(T Data);
+        T Pop();
 
-        
+        bool IsEmpty { get; }
+        int Size { get; }
     }
 }

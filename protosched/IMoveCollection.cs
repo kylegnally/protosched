@@ -10,5 +10,9 @@ namespace protosched
     {
         void Add(Move move);
         void Remove(Move move);
+
+        void SortByEquipmentType();
+        void SorByEarliestTime();
+        string[] PrintTheMovesList();
     }
 }

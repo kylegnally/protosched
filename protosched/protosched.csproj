@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Equipment.cs" />
+    <Compile Include="GenericStack.cs" />
     <Compile Include="IEquipment.cs" />
+    <Compile Include="IGenericStack.cs" />
     <Compile Include="IMove.cs" />
     <Compile Include="IMoveCollection.cs" />
     <Compile Include="MiscEquipment.cs" />
