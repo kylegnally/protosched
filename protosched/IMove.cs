@@ -13,6 +13,5 @@ namespace protosched
 
         // property to hold this move's order
         int GetOrder { get; set; }
-
     }
 }

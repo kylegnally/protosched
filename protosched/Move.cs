@@ -8,6 +8,13 @@ namespace protosched
 {
     class Move
     {
-
+        private Equipment EquipmentName;
+        private string BuildingName;
+        private string FromRoom;
+        private string ToRoom;
+        private DateTime MoveFrom;
+        private DateTime MoveTo;
+        private DateTime NeededFrom;
+        private DateTime NeededTo;
     }
 }
