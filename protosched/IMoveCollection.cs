@@ -9,10 +9,10 @@ namespace protosched
     interface IMoveCollection
     {
         void Add(Move move);
-        void Remove(Move move);
+        //void Remove(Move move);
 
-        void SortByEquipmentType();
-        void SorByEarliestTime();
-        string[] PrintTheMovesList();
+        //void SortByEquipmentType();
+        //void SorByEarliestTime();
+        //string[] PrintTheMovesList();
     }
 }

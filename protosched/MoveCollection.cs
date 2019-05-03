@@ -25,5 +25,18 @@ namespace protosched
             moves = new IMove[100];
             collectionPosition = 0;
         }
+
+        // you will need FOUR add methods, one for each type of (droid) equipment you want to move
+        public void Add(string building, string fromRoom, string toRoom, DateTime moveFromTime, DateTime moveToTime, DateTime neededFromTime, DateTime neededToTime)
+        {
+            moves[collectionPosition] = new Move();
+            //BuildingName + " " +
+            //FromRoom + " TO " +
+            //    ToRoom + " @" +
+            //    MoveTimeFrom + "-" +
+            //    MoveTimeTo + " NEEDED @" +
+            //    NeededTimeFrom + "-" +
+            //    NeededTimeTo
+        }
     }
 }

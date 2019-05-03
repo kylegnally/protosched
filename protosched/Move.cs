@@ -20,7 +20,7 @@ namespace protosched
         private DateTime NeededTimeFrom { get; set; }
         private DateTime NeededTimeTo { get; set; }
 
-        protected Move(string buildingName, 
+        public Move(string buildingName, 
             string fromRoom,
             string toRoom, 
             DateTime moveTimeFrom, 
