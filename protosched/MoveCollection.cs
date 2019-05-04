@@ -39,18 +39,16 @@ namespace protosched
         public void Add(string equipmentName,
             string fromRoom,
             string toRoom,
-            DateTime moveFromTime,
-            DateTime moveToTime,
-            DateTime neededFromTime,
-            DateTime neededToTime,
+            //DateTime moveFromTime,
+            //DateTime moveToTime,
+            //DateTime neededFromTime,
+            //DateTime neededToTime,
             string notes,
             bool hasPrinter)
         {
             moves[collectionPosition] = new WowCartMove(
                 fromRoom, 
                 toRoom, 
-                neededFromTime, 
-                neededToTime, 
                 notes, 
                 hasPrinter);
             //BuildingName + " " +
