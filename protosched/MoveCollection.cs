@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace protosched
 {
@@ -27,16 +23,16 @@ namespace protosched
         }
 
         // you will need FOUR add methods, one for each type of (droid) equipment you want to move
-        public void Add(string building, string fromRoom, string toRoom, DateTime moveFromTime, DateTime moveToTime, DateTime neededFromTime, DateTime neededToTime)
-        {
-            moves[collectionPosition] = new Move(building, fromRoom, toRoom, moveFromTime, moveToTime, neededFromTime, neededToTime);
-            //BuildingName + " " +
-            //FromRoom + " TO " +
-            //    ToRoom + " @" +
-            //    MoveTimeFrom + "-" +
-            //    MoveTimeTo + " NEEDED @" +
-            //    NeededTimeFrom + "-" +
-            //    NeededTimeTo
-        }
+        //public void Add(string building, string fromRoom, string toRoom, DateTime moveFromTime, DateTime moveToTime, DateTime neededFromTime, DateTime neededToTime)
+        //{
+        //    moves[collectionPosition] = new 
+        //    //BuildingName + " " +
+        //    //FromRoom + " TO " +
+        //    //    ToRoom + " @" +
+        //    //    MoveTimeFrom + "-" +
+        //    //    MoveTimeTo + " NEEDED @" +
+        //    //    NeededTimeFrom + "-" +
+        //    //    NeededTimeTo
+        //}
     }
 }

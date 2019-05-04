@@ -11,7 +11,8 @@ namespace protosched
         // method to calculate the order this move is in the list (should be elsewhere?)
         void CalculateMoveOrder();
 
-        // property to hold this move's order
+        // forced inclusions 
         DateTime MoveTimeFrom { get; set; }
+        string Notes { get; set; }
     }
 }

@@ -7,46 +7,47 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
+    /// <summary>
+    /// Class that contains information shared by all moves and only moves. 
+    /// </summary>
     abstract class Move : IMove
     {
-        private Equipment EquipmentName;
-        private string BuildingName;
         private string FromRoom;
         private string ToRoom;
 
         public DateTime MoveTimeFrom { get; set; }
-        public abstract int MoveOrderNumber { get; set; }
-        private DateTime MoveTimeTo { get; set; }
-        private DateTime NeededTimeFrom { get; set; }
-        private DateTime NeededTimeTo { get; set; }
+        public DateTime MoveTimeTo { get; }
+        public string Notes { get; set; }
 
-        public Move(string buildingName, 
-            string fromRoom,
+        // private int TotalMinutes { get; } later. Not now.
+
+        protected Move(string fromRoom,
             string toRoom, 
             DateTime moveTimeFrom, 
-            DateTime moveTimeTo, 
-            DateTime neededTimeFrom, 
-            DateTime neededTimeTo
+            DateTime moveTimeTo, string notes 
             )
         {
-            this.BuildingName = buildingName;
             this.MoveTimeFrom = moveTimeFrom;
             this.MoveTimeTo = moveTimeTo;
             this.FromRoom = fromRoom;
             this.ToRoom = toRoom;
-            this.NeededTimeFrom = neededTimeFrom;
-            this.NeededTimeTo = neededTimeTo;
+            this.Notes = notes;
         }
 
         public override string ToString()
         {
-            return BuildingName + " " +
-                   FromRoom + " TO " +
+            string r = FromRoom + " TO " +
                    ToRoom + " @" +
                    MoveTimeFrom + "-" +
-                   MoveTimeTo + " NEEDED @" +
-                   NeededTimeFrom + "-" +
-                   NeededTimeTo;
+                   MoveTimeTo;
+
+            if (Notes != null)
+            {
+                r += " NOTES: " + Notes;
+                return r;
+            }
+
+            return r;
         }
 
         public int CompareTo(object move)

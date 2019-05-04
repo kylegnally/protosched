@@ -8,7 +8,7 @@ namespace protosched
 {
     interface IMoveCollection
     {
-        void Add(Move move);
+        void Add(string building, string fromRoom, string toRoom, DateTime moveFromTime, DateTime moveToTime, DateTime neededFromTime, DateTime neededToTime);
         //void Remove(Move move);
 
         //void SortByEquipmentType();
