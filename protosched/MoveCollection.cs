@@ -59,5 +59,27 @@ namespace protosched
             //    NeededTimeFrom + "-" +
             //    NeededTimeTo
         }
+
+        string[] PrintTheMoves()
+        {
+            string[] allMoves = new string[collectionPosition];
+
+            for (int i = 0; i < moves.Length; i++)
+            {
+                if (moves[i] != null)
+                {
+                    Console.WriteLine(allMoves[i] = moves[i].ToString());
+                }
+
+                else if (moves[0] == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("\t\t\t\t\tNO DROIDS IN INVENTORY");
+                    Console.ResetColor();
+                }
+            }
+
+            return allMoves;
+        }
     }
 }
