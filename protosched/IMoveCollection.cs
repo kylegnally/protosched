@@ -10,7 +10,6 @@ namespace protosched
     {
         // add method for a WOW cart
         void Add(
-            string building, 
             string equipmentName,
             string fromRoom, 
             string toRoom, 

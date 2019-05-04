@@ -22,17 +22,44 @@ namespace protosched
             collectionPosition = 0;
         }
 
-        // you will need FOUR add methods, one for each type of (droid) equipment you want to move
-        //public void Add(string building, string fromRoom, string toRoom, DateTime moveFromTime, DateTime moveToTime, DateTime neededFromTime, DateTime neededToTime)
-        //{
-        //    moves[collectionPosition] = new 
-        //    //BuildingName + " " +
-        //    //FromRoom + " TO " +
-        //    //    ToRoom + " @" +
-        //    //    MoveTimeFrom + "-" +
-        //    //    MoveTimeTo + " NEEDED @" +
-        //    //    NeededTimeFrom + "-" +
-        //    //    NeededTimeTo
-        //}
+        // you will need FOUR add methods, one for each type of(droid) equipment you want to move
+
+        /// <summary>
+        /// Add method for a WOW cart.
+        /// </summary>
+        /// <param name="equipmentName"></param>
+        /// <param name="fromRoom"></param>
+        /// <param name="toRoom"></param>
+        /// <param name="moveFromTime"></param>
+        /// <param name="moveToTime"></param>
+        /// <param name="neededFromTime"></param>
+        /// <param name="neededToTime"></param>
+        /// <param name="notes"></param>
+        /// <param name="hasPrinter"></param>
+        public void Add(string equipmentName,
+            string fromRoom,
+            string toRoom,
+            DateTime moveFromTime,
+            DateTime moveToTime,
+            DateTime neededFromTime,
+            DateTime neededToTime,
+            string notes,
+            bool hasPrinter)
+        {
+            moves[collectionPosition] = new WowCartMove(
+                fromRoom, 
+                toRoom, 
+                neededFromTime, 
+                neededToTime, 
+                notes, 
+                hasPrinter);
+            //BuildingName + " " +
+            //FromRoom + " TO " +
+            //    ToRoom + " @" +
+            //    MoveTimeFrom + "-" +
+            //    MoveTimeTo + " NEEDED @" +
+            //    NeededTimeFrom + "-" +
+            //    NeededTimeTo
+        }
     }
 }

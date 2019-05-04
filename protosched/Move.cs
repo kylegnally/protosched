@@ -46,20 +46,22 @@ namespace protosched
                 r += " NOTES: " + Notes;
                 return r;
             }
+            else Notes = "NOTES: ";
 
             return r;
         }
 
         public int CompareTo(object move)
         {
-            if (move is IMove otherMove)
+            return 0;
+            //if (move is IMove otherMove)
 
-                // Code for finding the total time available for the move
+            //    // Code for finding the total time available for the move
 
 
-                return this.MoveTimeFrom.CompareTo(otherMove.MoveTimeFrom);
-            else
-                throw new ArgumentException("Object is not a Move");
+            //    return this.MoveTimeFrom.CompareTo(otherMove.MoveTimeFrom);
+            //else
+            //    throw new ArgumentException("Object is not a Move");
         }
 
         public abstract void CalculateMoveOrder();
