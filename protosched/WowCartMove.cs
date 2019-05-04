@@ -14,10 +14,10 @@ namespace protosched
         public WowCartMove(
             string fromRoom,
             string toRoom,
-            DateTime neededFromTime,
-            DateTime neededToTime,
+            //DateTime neededFromTime,
+            //DateTime neededToTime,
             string notes,
-            bool hasPrinter) : base(fromRoom, toRoom, neededFromTime, neededToTime, notes)
+            bool hasPrinter) : base(fromRoom, toRoom, notes)
         {
             this.HasPrinter = hasPrinter;
         }

@@ -15,20 +15,19 @@ namespace protosched
         private string FromRoom;
         private string ToRoom;
 
-        public DateTime MoveTimeFrom { get; set; }
-        public DateTime MoveTimeTo { get; }
+        //public DateTime MoveTimeFrom { get; set; }
+        //public DateTime MoveTimeTo { get; }
         public string Notes { get; set; }
 
         // private int TotalMinutes { get; } later. Not now.
 
         protected Move(string fromRoom,
             string toRoom, 
-            DateTime moveTimeFrom, 
-            DateTime moveTimeTo, string notes 
+            string notes 
             )
         {
-            this.MoveTimeFrom = moveTimeFrom;
-            this.MoveTimeTo = moveTimeTo;
+            //this.MoveTimeFrom = moveTimeFrom;
+            //this.MoveTimeTo = moveTimeTo;
             this.FromRoom = fromRoom;
             this.ToRoom = toRoom;
             this.Notes = notes;
@@ -37,9 +36,7 @@ namespace protosched
         public override string ToString()
         {
             string r = FromRoom + " TO " +
-                   ToRoom + " @" +
-                   MoveTimeFrom + "-" +
-                   MoveTimeTo;
+                   ToRoom;
 
             if (Notes != null)
             {

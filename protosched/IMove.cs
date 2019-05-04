@@ -12,7 +12,7 @@ namespace protosched
         void CalculateMoveOrder();
 
         // forced inclusions 
-        DateTime MoveTimeFrom { get; set; }
+        //DateTime MoveTimeFrom { get; set; }
         string Notes { get; set; }
     }
 }

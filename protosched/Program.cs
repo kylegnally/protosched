@@ -10,7 +10,13 @@ namespace protosched
     {
         static void Main(string[] args)
         {
+            MoveCollection collection = new MoveCollection();
+            AddTestData(collection);
+        }
 
+        static void AddTestData(MoveCollection coll)
+        {
+            coll.Add("WOW1", "AWH204", "AWH207", );
         }
     }
 }
