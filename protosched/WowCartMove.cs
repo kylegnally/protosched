@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
-    class WowCartMove
+    class WowCartMove : Move
     {
+        private const string Name = "WOWCart";
     }
 }
