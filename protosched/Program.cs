@@ -12,6 +12,7 @@ namespace protosched
         {
             MoveCollection collection = new MoveCollection();
             AddTestData(collection);
+            collection.PrintTheMoves();
         }
 
         static void AddTestData(MoveCollection coll)

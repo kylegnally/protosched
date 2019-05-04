@@ -51,6 +51,7 @@ namespace protosched
                 toRoom, 
                 notes, 
                 hasPrinter);
+            collectionPosition++;
             //BuildingName + " " +
             //FromRoom + " TO " +
             //    ToRoom + " @" +
@@ -60,7 +61,7 @@ namespace protosched
             //    NeededTimeTo
         }
 
-        string[] PrintTheMoves()
+        public string[] PrintTheMoves()
         {
             string[] allMoves = new string[collectionPosition];
 
