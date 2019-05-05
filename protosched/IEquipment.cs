@@ -11,10 +11,6 @@ namespace protosched
     {
         string Name { get; set; }
         string CurrentRoom { get; set; }
-
-        DateTime[] NeededRange { get; set; }
-
-
-        void CompareTo();
+        string Notes { get; set; }
     }
 }
