@@ -5,6 +5,19 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+/* NOTE
+ 
+      Change this class so it contains FromRoom, ToRoom, MoveTimeFrom, MoveTimeTo, and Notes:
+
+    - WowCart and Visualizer are TYPES of EQUIPMENT.
+    - Equipment has a name; 
+    - Equipment has printers, wheels, etc.
+    - Moves have none of these things
+    - Moves should not know these things
+    - EQUIPMENT NEEDS ITS OWN CLASS WITH SUBCLASSES, ONE FOR EACH TYPE
+
+*/
+
 namespace protosched
 {
     /// <summary>
