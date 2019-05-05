@@ -43,8 +43,6 @@ namespace protosched
             //DateTime neededFromTime,
             //DateTime neededToTime,
             string notes,
-            //bool hasPrinter,
-            //bool isLocked,
             bool hasWheels);
 
         // add method for misc stuff
