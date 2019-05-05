@@ -8,6 +8,7 @@ namespace protosched
 {
     class WhiteBoardEquipment
     {
+        public bool MustCarry { get; set; }
         //// add method for a whiteboard
         //void Add(string building,
         //    string equipmentName,
