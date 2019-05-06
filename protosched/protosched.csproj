@@ -52,18 +52,14 @@
     <Compile Include="IMove.cs" />
     <Compile Include="IMoveCollection.cs" />
     <Compile Include="MiscEquipment.cs" />
-    <Compile Include="MiscMove.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="MoveCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="VisualizerEquipment.cs" />
-    <Compile Include="VisualizerMove.cs" />
     <Compile Include="WhiteBoardEquipment.cs" />
-    <Compile Include="WhiteboardMove.cs" />
     <Compile Include="WowCartEquipment.cs" />
-    <Compile Include="WowCartMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

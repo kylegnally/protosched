@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
-    class Equipment : IEquipment
+    abstract class Equipment : IEquipment
     {
         public string EquipmentName { get; set; }
         public string CurrentRoom { get; set; }
         public string Notes { get; set; }
+        //public DateTime MoveFromTime { get; set; }
+        //public DateTime MoveToTime { get; set; }
+        public bool IsAvailableToMove { get; set; }
 
-        public Equipment(string name, string currentRoom, string notes)
+
+        public Equipment(string currentRoom, string notes, bool isAvailable)
         {
-            this.EquipmentName = name;
             this.CurrentRoom = currentRoom;
             this.Notes = notes;
+            this.IsAvailableToMove = isAvailable;
         }
 
         public int CompareTo(object otherEquipment)
