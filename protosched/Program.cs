@@ -18,7 +18,7 @@ namespace protosched
         static void AddTestData(MoveCollection coll)
         {
             Move aMove = new Move(new WowCartEquipment("210", null, false, true, 30 ), "210", "220", null);
-            coll.Add();
+            coll.Add(aMove);
 
         }
     }

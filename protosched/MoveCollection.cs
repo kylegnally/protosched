@@ -24,7 +24,10 @@ namespace protosched
 
         // you will need FOUR add methods, one for each type of(droid) equipment you want to move
 
-        
+        public void Add(IMove thingToMove)
+        {
+            if (thingToMove is WowCartEquipment) aWowStack.Push(thingToMove);
+        }
         ///// <summary>
         ///// Add method for a WOW cart.
         ///// </summary>
