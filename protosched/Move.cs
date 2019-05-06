@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 /* NOTE
  
       Change this class so it contains FromRoom, ToRoom, MoveTimeFrom, MoveTimeTo, and Notes:
