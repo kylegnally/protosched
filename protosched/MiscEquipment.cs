@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace protosched
+﻿namespace protosched
 {
-    class MiscEquipment
+    /// <summary>
+    /// Class to model miscellaneous equipment.
+    /// </summary>
+    class MiscEquipment : Equipment
     {
+        // vars for misc stuff
+        private int piecesOfEquipment;
+        private const string NAME = "Misc. Equipment";
+
+        public MiscEquipment(
+            string currentRoom,
+            string notes,
+            bool isAvailable,
+            int piecesOfEquipment) : base(currentRoom, notes, isAvailable)
+        {
+            this.piecesOfEquipment = piecesOfEquipment;
+            this.EquipmentName = NAME;
+        }
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace protosched
+﻿namespace protosched
 {
+    /// <summary>
+    /// Class to model a dry-erase whiteboard.
+    /// </summary>
     class WhiteBoardEquipment : Equipment
     {
         // vars for a whiteboard

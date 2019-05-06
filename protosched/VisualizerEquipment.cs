@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace protosched
+﻿namespace protosched
 {
+    /// <summary>
+    /// Class to model a Visualizer.
+    /// </summary>
     class VisualizerEquipment : Equipment
     {
         // vars for a visualizer

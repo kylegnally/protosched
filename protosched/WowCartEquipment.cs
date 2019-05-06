@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace protosched
+﻿namespace protosched
 {
+    /// <summary>
+    /// Class to model a Wow cart.
+    /// </summary>
     class WowCartEquipment : Equipment
     {
         // WOWcart-specific vars
