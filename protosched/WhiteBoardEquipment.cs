@@ -6,21 +6,24 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
-    class WhiteBoardEquipment
+    class WhiteBoardEquipment : Equipment
     {
-        public bool MustCarry { get; set; }
-        //// add method for a whiteboard
-        //void Add(string building,
-        //    string equipmentName,
-        //    string fromRoom,
-        //    string toRoom,
-        //    DateTime moveFromTime,
-        //    DateTime moveToTime,
-        //    DateTime neededFromTime,
-        //    DateTime neededToTime,
-        //    string notes,
-        //    bool hasPrinter,
-        //    bool isLocked,
-        //    bool mustCarry);
+        // vars for a whiteboard
+        private bool hasEraser;
+        private bool hasMarker;
+
+        private const string NAME = "Whiteboard";
+
+        public WhiteBoardEquipment(
+            string curRoom,
+            string notes,
+            bool isAvailable,
+            bool hasEraser,
+            bool hasMarker) : base(curRoom, notes, isAvailable)
+        {
+            this.hasEraser = hasEraser;
+            this.hasMarker = hasMarker;
+            this.EquipmentName = NAME;
+        }
     }
 }
