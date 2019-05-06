@@ -1,7 +1,7 @@
 ﻿
 /* NOTE
  
-      Change this class so it contains FromRoom, ToRoom, MoveTimeFrom, MoveTimeTo, and Notes:
+      Change this class so it contains FromRoom, ToRoom, NeedEquipmentFromTime, NeedEquipmentToTime, and Notes:
 
     - WowCart and Visualizer are TYPES of EQUIPMENT.
     - Equipment has a name; 
