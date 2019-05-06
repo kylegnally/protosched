@@ -9,8 +9,11 @@ namespace protosched
 {
     interface IEquipment : IComparable
     {
-        string Name { get; set; }
+        string EquipmentName { get; set; }
         string CurrentRoom { get; set; }
+        DateTime NeededFrom { get; set; }
+        DateTime NeededTo { get; set; }
         string Notes { get; set; }
+        bool IsAvailableToMove { get; set; }
     }
 }

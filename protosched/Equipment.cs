@@ -8,13 +8,13 @@ namespace protosched
 {
     class Equipment : IEquipment
     {
-        public string Name { get; set; }
+        public string EquipmentName { get; set; }
         public string CurrentRoom { get; set; }
         public string Notes { get; set; }
 
         public Equipment(string name, string currentRoom, string notes)
         {
-            this.Name = name;
+            this.EquipmentName = name;
             this.CurrentRoom = currentRoom;
             this.Notes = notes;
         }
