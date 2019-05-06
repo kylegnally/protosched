@@ -17,7 +17,7 @@ namespace protosched
 
         static void AddTestData(MoveCollection coll)
         {
-            coll.Add("WOW1", "AWH204", "AWH207", "Test Data", true);
+            
         }
     }
 }

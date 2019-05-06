@@ -13,11 +13,9 @@ namespace protosched
     {
         // add method for a WOW cart
         void Add(string equipmentName,
-            string fromRoom, 
-            string toRoom, 
-            //DateTime moveFromTime, 
-            //DateTime moveToTime, 
+            string currentRoom, 
             string notes,
+            bool isAvailableToMove,
             bool hasPrinter,
             int numLaptops
             );
