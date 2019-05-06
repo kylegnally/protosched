@@ -17,7 +17,7 @@ namespace protosched
     /// <summary>
     /// Class that contains information shared by all moves and only moves. 
     /// </summary>
-    abstract class Move : IMove
+    class Move : IMove
     {
         private string FromRoom;
         private string ToRoom;
@@ -37,6 +37,7 @@ namespace protosched
             this.FromRoom = fromRoom;
             this.ToRoom = toRoom;
             this.MoveNotes = notes;
+            
         }
 
         public override string ToString()
@@ -67,6 +68,9 @@ namespace protosched
             //    throw new ArgumentException("Object is not a Move");
         }
 
-        public abstract void CalculateMoveOrder();
+        public void CalculateMoveOrder()
+        {
+
+        }
     }
 }

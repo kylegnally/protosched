@@ -24,42 +24,43 @@ namespace protosched
 
         // you will need FOUR add methods, one for each type of(droid) equipment you want to move
 
-        /// <summary>
-        /// Add method for a WOW cart.
-        /// </summary>
-        /// <param name="equipmentName"></param>
-        /// <param name="fromRoom"></param>
-        /// <param name="toRoom"></param>
-        /// <param name="moveFromTime"></param>
-        /// <param name="moveToTime"></param>
-        /// <param name="neededFromTime"></param>
-        /// <param name="neededToTime"></param>
-        /// <param name="notes"></param>
-        /// <param name="hasPrinter"></param>
-        public void Add(string equipmentName,
-            string fromRoom,
-            string toRoom,
-            //DateTime moveFromTime,
-            //DateTime moveToTime,
-            //DateTime neededFromTime,
-            //DateTime neededToTime,
-            string notes,
-            bool hasPrinter)
-        {
-            moves[collectionPosition] = new WowCartMove(
-                fromRoom, 
-                toRoom, 
-                notes, 
-                hasPrinter);
-            collectionPosition++;
-            //BuildingName + " " +
-            //FromRoom + " TO " +
-            //    ToRoom + " @" +
-            //    MoveTimeFrom + "-" +
-            //    MoveTimeTo + " NEEDED @" +
-            //    NeededTimeFrom + "-" +
-            //    NeededTimeTo
-        }
+        
+        ///// <summary>
+        ///// Add method for a WOW cart.
+        ///// </summary>
+        ///// <param name="equipmentName"></param>
+        ///// <param name="fromRoom"></param>
+        ///// <param name="toRoom"></param>
+        ///// <param name="moveFromTime"></param>
+        ///// <param name="moveToTime"></param>
+        ///// <param name="neededFromTime"></param>
+        ///// <param name="neededToTime"></param>
+        ///// <param name="notes"></param>
+        ///// <param name="hasPrinter"></param>
+        //public void Add(string equipmentName,
+        //    string fromRoom,
+        //    string toRoom,
+        //    //DateTime moveFromTime,
+        //    //DateTime moveToTime,
+        //    //DateTime neededFromTime,
+        //    //DateTime neededToTime,
+        //    string notes,
+        //    bool hasPrinter)
+        //{
+        //    moves[collectionPosition] = new WowCartMove(
+        //        fromRoom, 
+        //        toRoom, 
+        //        notes, 
+        //        hasPrinter);
+        //    collectionPosition++;
+        //    //BuildingName + " " +
+        //    //FromRoom + " TO " +
+        //    //    ToRoom + " @" +
+        //    //    MoveTimeFrom + "-" +
+        //    //    MoveTimeTo + " NEEDED @" +
+        //    //    NeededTimeFrom + "-" +
+        //    //    NeededTimeTo
+        //}
 
         public string[] PrintTheMoves()
         {
