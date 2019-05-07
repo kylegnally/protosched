@@ -11,23 +11,12 @@ namespace protosched
         public string EquipmentName { get; set; }
         public string CurrentRoom { get; set; }
         public string Notes { get; set; }
-        //public DateTime MoveFromTime { get; set; }
-        //public DateTime MoveToTime { get; set; }
 
-        // this shouldn't be necessary
-        public bool IsAvailableToMove { get; set; }
-
-
-        public Equipment(string currentRoom, string notes, bool isAvailable)
+        protected Equipment(string equipmentName, string currentRoom, string notes)
         {
+            this.EquipmentName = equipmentName;
             this.CurrentRoom = currentRoom;
             this.Notes = notes;
-            this.IsAvailableToMove = isAvailable;
-        }
-
-        public int CompareTo(object otherEquipment)
-        {
-            return 0;
         }
     }
 }

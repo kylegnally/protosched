@@ -15,7 +15,6 @@ namespace protosched
         void Add(string equipmentName,
             string currentRoom, 
             string notes,
-            bool isAvailableToMove,
             bool hasPrinter,
             int numLaptops
             );
