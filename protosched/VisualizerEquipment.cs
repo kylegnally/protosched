@@ -1,4 +1,6 @@
-﻿namespace protosched
+﻿using System.Runtime.CompilerServices;
+
+namespace protosched
 {
     /// <summary>
     /// Class to model a Visualizer.
@@ -11,13 +13,13 @@
         private const string NAME = "Visualizer";
 
         public VisualizerEquipment(
+            string equipmentName,
             string currentRoom,
             string notes,
-            bool isAvailable,
-            bool isLocked) : base(currentRoom, notes, isAvailable)
+            bool isLocked) : base(equipmentName, currentRoom, notes)
         {
-            this.isLocked = isLocked;
             this.EquipmentName = NAME;
+            this.isLocked = isLocked;
         }
     }
 }

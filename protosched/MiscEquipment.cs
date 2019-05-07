@@ -10,13 +10,13 @@
         private const string NAME = "Misc. Equipment";
 
         public MiscEquipment(
+            string equipmentName,
             string currentRoom,
             string notes,
-            bool isAvailable,
-            int piecesOfEquipment) : base(currentRoom, notes, isAvailable)
+            int piecesOfEquipment) : base(equipmentName, currentRoom, notes)
         {
-            this.piecesOfEquipment = piecesOfEquipment;
             this.EquipmentName = NAME;
+            this.piecesOfEquipment = piecesOfEquipment;
         }
     }
 }

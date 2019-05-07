@@ -12,11 +12,11 @@
         private const string NAME = "WOWCart";
 
         public WowCartEquipment(
+            string equipmentName,
             string curRoom,
             string notes,
-            bool isAvailable,
             bool hasPrinter,
-            int numLaptops) : base(curRoom, notes, isAvailable)
+            int numLaptops) : base(equipmentName, curRoom, notes)
         {
             this.EquipmentName = NAME;
             this.hasPrinter = hasPrinter;

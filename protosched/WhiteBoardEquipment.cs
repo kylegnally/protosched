@@ -12,15 +12,15 @@
         private const string NAME = "Whiteboard";
 
         public WhiteBoardEquipment(
+            string equipmentName,
             string curRoom,
             string notes,
-            bool isAvailable,
             bool hasEraser,
-            bool hasMarker) : base(curRoom, notes, isAvailable)
+            bool hasMarker) : base(equipmentName, curRoom, notes)
         {
+            this.EquipmentName = NAME;
             this.hasEraser = hasEraser;
             this.hasMarker = hasMarker;
-            this.EquipmentName = NAME;
         }
     }
 }
