@@ -8,18 +8,25 @@
         // vars for misc stuff
         private const string NAME = "Misc. Equipment";
         private int piecesOfEquipment;
-        private string[] pieceNames;
+        //private string[] pieceNames;
+
+        public override string EquipmentListing { get; set; }
 
         public MiscEquipment(
             string equipmentName,
             string currentRoom,
             string notes,
-            int piecesOfEquipment,
-            string[] pieceNames) : base(equipmentName, currentRoom, notes)
+            int piecesOfEquipment/*,
+            string[] pieceNames*/) : base(equipmentName, currentRoom, notes)
         {
-            this.EquipmentName = NAME;
+            this.EquipmentName = equipmentName;
             this.piecesOfEquipment = piecesOfEquipment;
-            this.pieceNames = pieceNames;
+            //this.pieceNames = pieceNames;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " NUMBER OF PIECES: " + piecesOfEquipment + " ";
         }
     }
 }

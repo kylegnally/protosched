@@ -9,7 +9,7 @@
         private bool hasEraser;
         private bool hasMarker;
 
-        private const string NAME = "Whiteboard";
+        public override string EquipmentListing { get; set; }
 
         public WhiteBoardEquipment(
             string equipmentName,
@@ -18,9 +18,18 @@
             bool hasEraser,
             bool hasMarker) : base(equipmentName, curRoom, notes)
         {
-            this.EquipmentName = NAME;
+            this.EquipmentName = equipmentName;
             this.hasEraser = hasEraser;
             this.hasMarker = hasMarker;
+        }
+
+        public override string ToString()
+        {
+            if (!hasEraser) base.Notes += " NO ERASER ";
+            else base.Notes += " HAS ERASER ";
+            if (!hasMarker) base.Notes += " NO MARKER ";
+            else base.Notes += " HAS MARKER ";
+            return base.ToString();
         }
     }
 }

@@ -9,7 +9,7 @@
         private bool hasPrinter;
         private int numLaptops;
 
-        private const string NAME = "WOWCart";
+        public override string EquipmentListing { get; set; }
 
         public WowCartEquipment(
             string equipmentName,
@@ -18,9 +18,16 @@
             bool hasPrinter,
             int numLaptops) : base(equipmentName, curRoom, notes)
         {
-            this.EquipmentName = NAME;
+            this.EquipmentName = equipmentName;
             this.hasPrinter = hasPrinter;
             this.numLaptops = numLaptops;
+        }
+
+        public override string ToString()
+        {
+            if (!hasPrinter) base.Notes = "DOES NOT HAVE PRINTER";
+            else base.Notes = "HAS PRINTER";
+            return base.ToString() + " LAPTOPS: " + numLaptops;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace protosched
         void Add(string equipmentName, string currentRoom, string notes, bool hasMarker, bool hasEraser);
 
         // add method for misc stuff
-        void Add(string equipmentName, string currentRoom, string notes, int piecesOfEquipment, string[] pieceNames);
+        void Add(string equipmentName, string currentRoom, string notes, int piecesOfEquipment/*, string[] pieceNames*/);
 
         //void Remove(Move move);
 

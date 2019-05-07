@@ -13,6 +13,7 @@ namespace protosched
             EquipmentCollection equipmentColl = new EquipmentCollection();
             AddTestData(equipmentColl);
             equipmentColl.PrintTheInventory();
+            Console.WriteLine("Done!");
         }
 
         static void AddTestData(EquipmentCollection coll)
@@ -25,7 +26,7 @@ namespace protosched
             coll.Add("Visualizer1", "AWH209", null, false);
             coll.Add("Visualizer2", "AWH207", null, true);
             coll.Add("Visualizer3", "AWH208", null, true);
-            coll.Add("Misc", "AWH128", null, 3, names);
+            coll.Add("Misc", "AWH128", null, 3/*, names*/);
             coll.Add("Whiteboard", "AWH208", null, false, false);
             coll.Add("Whiteboard", "AWH205", null, true, true);
 

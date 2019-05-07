@@ -9,8 +9,7 @@ namespace protosched
     {
         // vars for a visualizer
         private bool isLocked;
-
-        private const string NAME = "Visualizer";
+        public override string EquipmentListing { get; set; }
 
         public VisualizerEquipment(
             string equipmentName,
@@ -18,8 +17,15 @@ namespace protosched
             string notes,
             bool isLocked) : base(equipmentName, currentRoom, notes)
         {
-            this.EquipmentName = NAME;
+            this.EquipmentName = equipmentName;
             this.isLocked = isLocked;
+        }
+
+        public override string ToString()
+        {
+            if (!isLocked) base.Notes = " IS UNLOCKED ";
+            else base.Notes = " IS LOCKED ";
+            return base.ToString();
         }
     }
 }
