@@ -47,13 +47,13 @@
     <Compile Include="GenericQueue.cs" />
     <Compile Include="GenericStack.cs" />
     <Compile Include="IEquipment.cs" />
+    <Compile Include="IEquipmentCollection.cs" />
     <Compile Include="IGenericQueue.cs" />
     <Compile Include="IGenericStack.cs" />
     <Compile Include="IMove.cs" />
-    <Compile Include="IMoveCollection.cs" />
     <Compile Include="MiscEquipment.cs" />
     <Compile Include="Move.cs" />
-    <Compile Include="MoveCollection.cs" />
+    <Compile Include="EquipmentCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface.cs" />

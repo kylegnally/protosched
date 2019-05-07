@@ -10,15 +10,24 @@ namespace protosched
     {
         static void Main(string[] args)
         {
-            MoveCollection collection = new MoveCollection();
-            AddTestData(collection);
-            collection.PrintTheMoves();
+            EquipmentCollection equipmentColl = new EquipmentCollection();
+            AddTestData(equipmentColl);
+            equipmentColl.PrintTheInventory();
         }
 
-        static void AddTestData(MoveCollection coll)
+        static void AddTestData(EquipmentCollection coll)
         {
-            Move aMove = new Move(new WowCartEquipment("210", null, false, true, 30 ), "210", "220", null);
-            coll.Add(aMove);
+            string[] names = {"Mic", "Podium", "Amplifier"};
+
+            coll.Add("WOWCart1", "AWH204", null, true, 30);
+            coll.Add("WOWCart2", "AWH204", null, true, 30);
+            coll.Add("WOWCart3", "AWH204", "Wants a printer", false, 24);
+            coll.Add("Visualizer1", "AWH209", null, false);
+            coll.Add("Visualizer2", "AWH207", null, true);
+            coll.Add("Visualizer3", "AWH208", null, true);
+            coll.Add("Misc", "AWH128", null, 3, names);
+            coll.Add("Whiteboard", "AWH208", null, false, false);
+            coll.Add("Whiteboard", "AWH205", null, true, true);
 
         }
     }
