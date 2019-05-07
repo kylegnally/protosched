@@ -6,7 +6,7 @@ namespace protosched
     class EquipmentCollection : IEquipmentCollection
     {
         private IEquipment[] equipment;
-        private int pieces
+        private int pieces;
         private int collectionPosition;
 
         // generic stacks for each move type
