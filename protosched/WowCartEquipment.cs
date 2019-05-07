@@ -21,12 +21,13 @@
             this.EquipmentName = equipmentName;
             this.hasPrinter = hasPrinter;
             this.numLaptops = numLaptops;
+            this.Notes = notes;
         }
 
         public override string ToString()
         {
-            if (!hasPrinter) base.Notes = "DOES NOT HAVE PRINTER";
-            else base.Notes = "HAS PRINTER";
+            //if (!hasPrinter) base.Notes = "DOES NOT HAVE PRINTER";
+            //else base.Notes = "HAS PRINTER";
 
             return base.ToString() + " LAPTOPS: " + numLaptops;
         }

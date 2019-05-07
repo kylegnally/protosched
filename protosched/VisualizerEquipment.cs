@@ -19,12 +19,13 @@ namespace protosched
         {
             this.EquipmentName = equipmentName;
             this.isLocked = isLocked;
+            this.Notes = notes;
         }
 
         public override string ToString()
         {
-            if (!isLocked) base.Notes = "IS UNLOCKED ";
-            else base.Notes = "IS LOCKED ";
+            //if (!isLocked) base.Notes = "IS UNLOCKED ";
+            //else base.Notes = "IS LOCKED ";
             return base.ToString();
         }
     }

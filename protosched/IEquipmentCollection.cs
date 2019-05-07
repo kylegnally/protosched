@@ -11,22 +11,18 @@ namespace protosched
     /// </summary>
     interface IEquipmentCollection
     {
-        // add method for a WOW cart
+        // WOW cart
         void Add(string equipmentName, string currentRoom, string notes, bool hasPrinter, int numLaptops);
 
-        // add method for a visualizer
+        // visualizer
         void Add(string equipmentName, string currentRoom, string notes, bool isLocked);
 
-        //add method for a whiteboard
+        // whiteboard
         void Add(string equipmentName, string currentRoom, string notes, bool hasMarker, bool hasEraser);
 
-        // add method for misc stuff
+        // misc stuff
         void Add(string equipmentName, string currentRoom, string notes, int piecesOfEquipment/*, string[] pieceNames*/);
 
-        //void Remove(Move move);
-
-        //void SortByEquipmentType();
-        //void SorByEarliestTime();
-        //string[] PrintTheMovesList();
+        string[] PrintTheInventory();
     }
 }

@@ -18,6 +18,7 @@ namespace protosched
         {
             this.EquipmentName = equipmentName;
             this.CurrentRoom = currentRoom;
+            this.Notes = notes;
 
             //if (String.IsNullOrEmpty(notes))
             //{
