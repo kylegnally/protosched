@@ -13,6 +13,8 @@ namespace protosched
         public string Notes { get; set; }
         //public DateTime MoveFromTime { get; set; }
         //public DateTime MoveToTime { get; set; }
+
+        // this shouldn't be necessary
         public bool IsAvailableToMove { get; set; }
 
 
