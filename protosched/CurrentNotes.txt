@@ -1,0 +1,20 @@
+﻿5/6/2019
+
+You're going to need two collections. One will be the equipment inventory. This will be able to deliver a 
+report showing which equipment is where and provide that information publicly. It will contain one item for
+every piece of equipment that's going to be moved anywhere ever. Should each piece of equipment also have a 
+record of things? Tuck away for later.
+
+The second collection will be the collection of moves themselves. This collection will be a carbon copy of 
+each day's actual move roequest record. You can use this data later as a stats source.
+
+The two collections will have to be used together by a Scheduling class that will use both collections to
+generate a move schedula. There will need to be several data checks and the class will have to use 
+recursion to break the problem down into smaller pieces. The base case should be a "can I move this at this
+time" question. It will have to work for ALL moves.
+
+Keep going! You have the equipment classes already written. Write a collection for the equipment FIRST. Then
+write a collection for the moves. Then verify that nthe two collections store the data you need in the way 
+wmant it stored. The BIG problem comes at the end. 
+
+You GOT this! Don't worry!
