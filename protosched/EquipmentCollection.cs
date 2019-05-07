@@ -23,11 +23,7 @@ namespace protosched
             equipment = new IEquipment[100];
             collectionPosition = 0;
         }
-
-        // you will need FOUR add methods, one for each type of equipment you want to move
-        // Yay complexity! You need TWO collections, one for equipment and one for moves
-
-
+        
         // WOW cart Add method
         public void Add(
             string equipmentName,
@@ -88,7 +84,7 @@ namespace protosched
                 else if (equipment[0] == null)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("\t\t\t\t\tNO DROIDS IN INVENTORY");
+                    Console.Write("\t\t\t\t\tNO EQUIPMENT IN INVENTORY");
                     Console.ResetColor();
                 }
             }

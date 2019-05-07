@@ -27,6 +27,7 @@
         {
             if (!hasPrinter) base.Notes = "DOES NOT HAVE PRINTER";
             else base.Notes = "HAS PRINTER";
+
             return base.ToString() + " LAPTOPS: " + numLaptops;
         }
     }

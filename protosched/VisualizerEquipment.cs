@@ -23,8 +23,8 @@ namespace protosched
 
         public override string ToString()
         {
-            if (!isLocked) base.Notes = " IS UNLOCKED ";
-            else base.Notes = " IS LOCKED ";
+            if (!isLocked) base.Notes = "IS UNLOCKED ";
+            else base.Notes = "IS LOCKED ";
             return base.ToString();
         }
     }

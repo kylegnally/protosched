@@ -25,10 +25,10 @@
 
         public override string ToString()
         {
-            if (!hasEraser) base.Notes += " NO ERASER ";
-            else base.Notes += " HAS ERASER ";
-            if (!hasMarker) base.Notes += " NO MARKER ";
-            else base.Notes += " HAS MARKER ";
+            if (!hasEraser) base.Notes = "NO ERASER ";
+            else base.Notes = "HAS ERASER ";
+            if (!hasMarker) base.Notes = "NO MARKER ";
+            else base.Notes = "HAS MARKER ";
             return base.ToString();
         }
     }
