@@ -18,3 +18,7 @@ write a collection for the moves. Then verify that nthe two collections store th
 wmant it stored. The BIG problem comes at the end. 
 
 You GOT this! Don't worry!
+
+5/7/2019
+
+The equipment collection works. 
