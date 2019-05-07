@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace protosched
+﻿namespace protosched
 {
     /// <summary>
     /// Class to model a Visualizer.

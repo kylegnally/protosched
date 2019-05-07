@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace protosched
 {
@@ -75,6 +74,10 @@ namespace protosched
             collectionPosition++;
         }
 
+        /// <summary>
+        /// Method to print the equipment inventory.
+        /// </summary>
+        /// <returns>string[]</returns>
         public string[] PrintTheInventory()
         {
             string[] allEquipment = new string[collectionPosition];
