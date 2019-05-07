@@ -9,7 +9,10 @@ namespace protosched
 {
     interface IEquipment
     {
+        string EquipmentName { get; set; }
         string CurrentRoom { get; set; }
         string Notes { get; set; }
+
+        string EquipmentListing { get; set; }
     }
 }

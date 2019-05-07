@@ -15,8 +15,8 @@ namespace protosched
         GenericStack<IEquipment> aBoardStack = new GenericStack<IEquipment>();
         GenericStack<IEquipment> aMiscStack = new GenericStack<IEquipment>();
 
-        // generic queue for all moves
-        GenericQueue<IEquipment> movesQueue = new GenericQueue<IEquipment>();
+        //// generic queue for all moves
+        //GenericQueue<IEquipment> movesQueue = new GenericQueue<IEquipment>();
 
         public EquipmentCollection()
         {
@@ -33,6 +33,7 @@ namespace protosched
             int numLaptops)
         {
             equipment[collectionPosition] = new WowCartEquipment(equipmentName, currentRoom, notes, hasPrinter, numLaptops);
+            aWowStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -44,6 +45,7 @@ namespace protosched
             bool isLocked)
         {
             equipment[collectionPosition] = new VisualizerEquipment(equipmentName, currentRoom, notes, isLocked);
+            aVisStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -56,6 +58,7 @@ namespace protosched
             bool hasEraser)
         {
             equipment[collectionPosition] = new WhiteBoardEquipment(equipmentName, currentRoom, notes, hasMarker, hasEraser);
+            aBoardStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -68,6 +71,7 @@ namespace protosched
             string[] pieceNames*/)
         {
             equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment/*, pieceNames*/);
+            aMiscStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
