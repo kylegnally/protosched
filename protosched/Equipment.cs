@@ -19,11 +19,11 @@ namespace protosched
             this.EquipmentName = equipmentName;
             this.CurrentRoom = currentRoom;
 
-            if (String.IsNullOrEmpty(notes))
-            {
-                this.Notes = "NONE";
-            }
-            else this.Notes = notes;
+            //if (String.IsNullOrEmpty(notes))
+            //{
+            //    this.Notes = "NONE";
+            //}
+            //else this.Notes = notes;
 
 
         }

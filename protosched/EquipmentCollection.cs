@@ -68,6 +68,7 @@ namespace protosched
             string[] pieceNames*/)
         {
             equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment/*, pieceNames*/);
+            collectionPosition++;
         }
 
         public string[] PrintTheInventory()
