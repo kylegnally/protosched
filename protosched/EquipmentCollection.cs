@@ -71,7 +71,7 @@ namespace protosched
             int piecesOfEquipment,
             string[] pieceNames)
         {
-            equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment, pieceNames[]);
+            equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment, pieceNames);
         }
 
         public string[] PrintTheInventory()
