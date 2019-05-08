@@ -4,7 +4,7 @@
     {
         public string EquipmentName { get; set; }
         public string CurrentRoom { get; set; }
-        public string Notes { get; set; }
+        public string EquipmentNotes { get; set; }
 
         public abstract string EquipmentListing { get; set; }
 
@@ -12,7 +12,7 @@
         {
             this.EquipmentName = equipmentName;
             this.CurrentRoom = currentRoom;
-            this.Notes = notes;
+            this.EquipmentNotes = notes;
 
             //if (String.IsNullOrEmpty(notes))
             //{

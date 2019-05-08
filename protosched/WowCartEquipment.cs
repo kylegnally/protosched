@@ -21,7 +21,7 @@
             this.EquipmentName = equipmentName;
             this.hasPrinter = hasPrinter;
             this.numLaptops = numLaptops;
-            this.Notes = notes;
+            this.EquipmentNotes = notes;
         }
 
         public override string ToString()

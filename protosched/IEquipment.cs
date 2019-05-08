@@ -11,7 +11,7 @@ namespace protosched
     {
         string EquipmentName { get; set; }
         string CurrentRoom { get; set; }
-        string Notes { get; set; }
+        string EquipmentNotes { get; set; }
 
         string EquipmentListing { get; set; }
     }

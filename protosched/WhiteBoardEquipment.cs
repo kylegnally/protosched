@@ -21,7 +21,7 @@
             this.EquipmentName = equipmentName;
             this.hasEraser = hasEraser;
             this.hasMarker = hasMarker;
-            this.Notes = notes;
+            this.EquipmentNotes = notes;
         }
 
         public override string ToString()

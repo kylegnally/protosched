@@ -20,6 +20,7 @@
             string[] pieceNames*/) : base(equipmentName, currentRoom, notes)
         {
             this.EquipmentName = equipmentName;
+            this.EquipmentNotes = notes;
             this.piecesOfEquipment = piecesOfEquipment;
             //this.pieceNames = pieceNames;
         }

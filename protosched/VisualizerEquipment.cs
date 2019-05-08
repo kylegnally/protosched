@@ -17,7 +17,7 @@
         {
             this.EquipmentName = equipmentName;
             this.isLocked = isLocked;
-            this.Notes = notes;
+            this.EquipmentNotes = notes;
         }
 
         public override string ToString()
