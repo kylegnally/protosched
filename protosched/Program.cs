@@ -25,7 +25,6 @@ namespace protosched
             coll.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
             coll.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
             coll.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
-
         }
     }
 }

@@ -3,7 +3,7 @@
 namespace protosched
 {
     /// <summary>
-    /// Class that contains information shared by all moves and only moves. 
+    /// Class that contains information shared by all moves. Takes an IEquipment.
     /// </summary>
     class Move : IMove
     {
