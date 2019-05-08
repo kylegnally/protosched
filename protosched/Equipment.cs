@@ -13,19 +13,11 @@
             this.EquipmentName = equipmentName;
             this.CurrentRoom = currentRoom;
             this.EquipmentNotes = notes;
-
-            //if (String.IsNullOrEmpty(notes))
-            //{
-            //    this.Notes = "NONE";
-            //}
-            //else this.Notes = notes;
-
-
         }
 
         public override string ToString()
         {
-            EquipmentListing = EquipmentName + " is located in " + CurrentRoom + " NOTES: " + Notes;
+            EquipmentListing = EquipmentName + " is located in " + CurrentRoom + " NOTES: " + EquipmentNotes;
             return EquipmentListing;
         }
     }

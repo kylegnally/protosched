@@ -1,29 +1,32 @@
-﻿namespace protosched
+﻿using System;
+
+namespace protosched
 {
     /// <summary>
     /// Class that contains information shared by all moves and only moves. 
     /// </summary>
     class Move : IMove
     {
-        private string FromRoom;
-        private string ToRoom;
+        private string toRoom;
         private IEquipment equipment;
 
+        public string FromRoom { get; set; }
+        public string ToRoom { get; set; }
+        public DateTime MoveFromTime { get; set; }
+        public DateTime MoveToTime { get; set; }
         public string MoveNotes { get; set; }
 
-        // private int TotalMinutes { get; } later. Not now.
-
         public Move(IEquipment equipment, 
-            string fromRoom,
             string toRoom, 
+            DateTime moveFromTime,
+            DateTime moveToTime,
             string notes)
         {
-            //this.MoveTimeFrom = moveTimeFrom;
-            //this.MoveTimeTo = moveTimeTo;
-            this.FromRoom = fromRoom;
+            this.FromRoom = equipment.CurrentRoom;
             this.ToRoom = toRoom;
+            this.MoveFromTime = moveFromTime;
+            this.MoveToTime = moveToTime;
             this.MoveNotes = notes;
-            
         }
 
         public override string ToString()
