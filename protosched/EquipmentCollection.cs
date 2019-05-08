@@ -14,9 +14,6 @@ namespace protosched
         GenericStack<IEquipment> aBoardStack = new GenericStack<IEquipment>();
         GenericStack<IEquipment> aMiscStack = new GenericStack<IEquipment>();
 
-        //// generic queue for all moves
-        //GenericQueue<IEquipment> movesQueue = new GenericQueue<IEquipment>();
-
         public EquipmentCollection()
         {
             equipment = new IEquipment[100];

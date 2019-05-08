@@ -27,3 +27,7 @@ The equipment collection works.
 
 The notes have been fixed. When a Notes is passed into the Equipment's constructor it will display the custom
 Note rather than a hardcoded Note. Note: the Note should be part of a Move and not part of Equipment. 
+
+5/8/2019, morning
+
+Start the Move class today. Also begin creating other grid-based interface.
