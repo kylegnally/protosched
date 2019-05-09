@@ -78,5 +78,25 @@ namespace protosched
             // and return the data we just popped off the stack
             return returnData;
         }
+
+        public string Print()
+        {
+            string dataString = "";
+            if (IsEmpty)
+            {
+                throw new Exception("Empty list");
+            }
+
+            else
+                while (!IsEmpty)
+                {
+                    dataString = head.Data.ToString();
+                    Console.WriteLine(dataString);
+                    Pop();
+                }
+
+            return dataString;
+
+        }
     }
 }

@@ -123,25 +123,43 @@ namespace protosched
 
         public string PrintAStack(string stack)
         {
-            stack = "w";
             string bullshit = "";
-
             switch (stack)
             {
                 case "w":
                     while (!aWowStack.IsEmpty)
                     {
                         bullshit += aWowStack.Pop().EquipmentListing + Environment.NewLine;
+                        aWowStack.Print();
+                    }
+                    break;
+
+                case "v":
+                    while (!aVisStack.IsEmpty)
+                    {
+                        bullshit += aVisStack.Pop().EquipmentListing + Environment.NewLine;
+                        aVisStack.Print();
+                    }
+                    break;
+
+                case "b":
+                    while (!aBoardStack.IsEmpty)
+                    {
+                        bullshit += aBoardStack.Pop().EquipmentListing + Environment.NewLine;
+                        aBoardStack.Print();
+                    }
+                    break;
+
+                case "m":
+                    while (!aWowStack.IsEmpty)
+                    {
+                        bullshit += aWowStack.Pop().EquipmentListing + Environment.NewLine;
+                        aMiscStack.Print();
                     }
                     break;
                 default:
                     break;
 
-                /*
-                 *
-                 *   other three cases here
-                 *
-                 */
             }
 
             Console.WriteLine(bullshit);
