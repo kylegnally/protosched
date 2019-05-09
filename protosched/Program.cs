@@ -10,6 +10,7 @@ namespace protosched
             SessionCollection sessionColl = new SessionCollection();
             AddTestData(equipmentColl, sessionColl);
             equipmentColl.PrintTheInventory();
+            Console.WriteLine();
             sessionColl.PrintTheClassroomSchedule();
             Console.WriteLine("Done!");
         }
