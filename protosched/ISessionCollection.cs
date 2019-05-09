@@ -13,5 +13,7 @@ namespace protosched
 
         // with an AV request
         void Add(string roomNumber, DateTime startTime, DateTime endTime, IEquipment equipmentNeeded);
+
+        string[] PrintTheClassroomSchedule();
     }
 }

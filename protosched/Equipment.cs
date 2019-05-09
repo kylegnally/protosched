@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            EquipmentListing = EquipmentName + " is located in " + CurrentRoom + " NOTES: " + EquipmentNotes;
+            EquipmentListing = EquipmentName + " located in " + CurrentRoom + " NOTES: " + EquipmentNotes;
             return EquipmentListing;
         }
     }

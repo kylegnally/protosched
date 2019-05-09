@@ -27,8 +27,8 @@ namespace protosched
             return base.ToString() + 
                    " with a length of " + 
                    lengthInMinutes.ToString() + 
-                   "minutes requires " +
-                   eqNeeded.EquipmentListing.ToString() + 
+                   " minutes requires " +
+                   eqNeeded.EquipmentListing + 
                    " by " + 
                    this.StartTime.ToString();
         }

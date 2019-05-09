@@ -33,5 +33,27 @@ namespace protosched
             aSessionWithEquipmentStack.Push(sessions[collectionPosition]);
             collectionPosition++;
         }
+
+        public string[] PrintTheClassroomSchedule()
+        {
+            string[] allEquipment = new string[collectionPosition];
+
+            for (int i = 0; i < sessions.Length; i++)
+            {
+                if (sessions[i] != null)
+                {
+                    Console.WriteLine(allEquipment[i] = sessions[i].ToString());
+                }
+
+                else if (sessions[0] == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("\t\t\t\t\tNO EQUIPMENT IN INVENTORY");
+                    Console.ResetColor();
+                }
+            }
+
+            return allEquipment;
+        }
     }
 }
