@@ -17,6 +17,8 @@
         // misc stuff
         void Add(string equipmentName, string currentRoom, string notes, int piecesOfEquipment/*, string[] pieceNames*/);
 
+        GenericStack<IEquipment> WowStack { get; set; }
+
         string[] PrintTheInventory();
     }
 }

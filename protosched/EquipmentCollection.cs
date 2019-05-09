@@ -14,6 +14,29 @@ namespace protosched
         GenericStack<IEquipment> aBoardStack = new GenericStack<IEquipment>();
         GenericStack<IEquipment> aMiscStack = new GenericStack<IEquipment>();
 
+        public GenericStack<IEquipment> WowStack
+        {
+            get => aWowStack;
+            set => aWowStack = value;
+        }
+
+        public GenericStack<IEquipment> VisStack
+        {
+            get => aVisStack;
+            set => aVisStack = value;
+        }
+
+        public GenericStack<IEquipment> BoardStack
+        {
+            get => aBoardStack;
+            set => aBoardStack = value;
+        }
+
+        public GenericStack<IEquipment> MiscStack
+        {
+            get => aMiscStack;
+            set => aMiscStack = value;
+        }
         public EquipmentCollection()
         {
             equipment = new IEquipment[100];
