@@ -51,12 +51,14 @@
     <Compile Include="IGenericQueue.cs" />
     <Compile Include="IGenericStack.cs" />
     <Compile Include="IMove.cs" />
+    <Compile Include="ISessionCollection.cs" />
     <Compile Include="MiscEquipment.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="EquipmentCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="SessionCollection.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="VisualizerEquipment.cs" />
     <Compile Include="WhiteBoardEquipment.cs" />
