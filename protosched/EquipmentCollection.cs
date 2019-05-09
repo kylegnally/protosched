@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace protosched
 {
@@ -118,6 +119,33 @@ namespace protosched
             }
 
             return allEquipment;
+        }
+
+        public string PrintAStack(string stack)
+        {
+            stack = "w";
+            string bullshit = "";
+
+            switch (stack)
+            {
+                case "w":
+                    while (!aWowStack.IsEmpty)
+                    {
+                        bullshit += aWowStack.Pop().EquipmentListing + Environment.NewLine;
+                    }
+                    break;
+                default:
+                    break;
+
+                /*
+                 *
+                 *   other three cases here
+                 *
+                 */
+            }
+
+            Console.WriteLine(bullshit);
+            return bullshit;
         }
     }
 }
