@@ -2,33 +2,23 @@
 
 namespace protosched
 {
-    class Session
+    abstract class Session : ISession
     {
-        private DateTime[] range;
-        private int lengthInMinutes;
+        public string Room { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
 
-        public DateTime[] SessionTimes { get; set; }
-        public TimeSpan SessionLength { get; set; }
-        public IEquipment Needs { get; set; }
-
-        public Session(DateTime startTime, DateTime endTime)
+        protected Session(string room, DateTime startTime, DateTime endTime)
         {
-            range = new DateTime[2];
-            range[0] = startTime;
-            range[1] = endTime;
-            SessionTimes = range;
-            SessionLength = endTime - startTime;
+            this.Room = room;
+            this.StartTime = startTime;
+            this.EndTime = endTime;
         }
 
         // for a session that has equipment needs
-        public Session(DateTime startTime, DateTime endTime, IEquipment equipmenNeeded)
+        protected Session(DateTime startTime, DateTime endTime)
         {
-            range = new DateTime[2];
-            range[0] = startTime;
-            range[1] = endTime;
-            SessionTimes = range;
-            SessionLength = endTime - startTime;
-            Needs = equipmenNeeded;
+
         }
     }
 }

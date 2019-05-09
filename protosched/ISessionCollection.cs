@@ -8,8 +8,10 @@ namespace protosched
 {
     interface ISessionCollection
     {
-        void Add(DateTime startTime, DateTime endTime);
+        // without an AV request
+        void Add(string roomNumber, DateTime startTime, DateTime endTime);
 
-        void Add(DateTime startTime, DateTime endTime, IEquipment equipmentNeeded);
+        // with an AV request
+        void Add(string roomNumber, DateTime startTime, DateTime endTime, IEquipment equipmentNeeded);
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="IGenericQueue.cs" />
     <Compile Include="IGenericStack.cs" />
     <Compile Include="IMove.cs" />
+    <Compile Include="ISession.cs" />
     <Compile Include="ISessionCollection.cs" />
     <Compile Include="MiscEquipment.cs" />
     <Compile Include="Move.cs" />
