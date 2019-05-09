@@ -26,7 +26,7 @@ namespace protosched
             coll.Add("Visualizer3", "AWH208", "Visualizer 3", true);
             coll.Add("Visualizer4", "AWH328", "Visualizer 3", false);
             coll.Add("Visualizer5", "AWH306", "Visualizer 3", false);
-            coll.Add("Visualizer6", "AWH304", "Visualizer 3", false);
+            coll.Add("Visualizer6", "AWH307", "Visualizer 3", false);
             coll.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
             coll.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
             coll.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
@@ -36,10 +36,13 @@ namespace protosched
                 "AWH206", 
                 new DateTime(2019,5,9,9,0,0), 
                 new DateTime(2019, 5,9, 10,40,0));
+
+            // this is the only piece of equipment needed this day per the AV schedule
             sessColl.Add(
                 "AWH304", 
                 new DateTime(2019,5,9,9,0,0), 
-                new DateTime(2019, 5, 9, 11,45,0));
+                new DateTime(2019, 5, 9, 11,45,0),
+                new VisualizerEquipment("Visualizer6", "AWH307", null, false));
             sessColl.Add(
                 "AWH309", 
                 new DateTime(2019, 5, 9, 9, 0, 0),
