@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace protosched
 {
-    public class SessionCollection : ISessionCollection
+    class SessionCollection : ISessionCollection
     {
         private ISession[] sessions;
         private int collectionPosition;
 
-        GenericStack<ISession> aSessionStack = new GenericStack<ISession>();
+        GenericStack<ISession> aSessionWithoutEquipmentStack = new GenericStack<ISession>();
+        GenericStack<ISession> aSessionWithEquipmentStack = new GenericStack<ISession>();
 
         public SessionCollection()
         {
@@ -21,7 +22,16 @@ namespace protosched
 
         public void Add(string roomNumber, DateTime startTime, DateTime endTime)
         {
-            sessions[collectionPosition] = new Session(roomNumber, startTime, endTime);
+            sessions[collectionPosition] = new NoEqSession(roomNumber, startTime, endTime);
+            aSessionWithoutEquipmentStack.Push(sessions[collectionPosition]);
+            collectionPosition++;
+        }
+
+        public void Add(string roomNumber, DateTime startTime, DateTime endTime, IEquipment equipment)
+        {
+            sessions[collectionPosition] = new EqSession(roomNumber, startTime, endTime, equipment);
+            aSessionWithEquipmentStack.Push(sessions[collectionPosition]);
+            collectionPosition++;
         }
     }
 }

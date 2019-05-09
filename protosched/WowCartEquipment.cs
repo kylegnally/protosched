@@ -19,6 +19,7 @@
             int numLaptops) : base(equipmentName, curRoom, notes)
         {
             this.EquipmentName = equipmentName;
+            this.CurrentRoom = curRoom;
             this.hasPrinter = hasPrinter;
             this.numLaptops = numLaptops;
             this.EquipmentNotes = notes;

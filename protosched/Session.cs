@@ -8,6 +8,8 @@ namespace protosched
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
+        public abstract string SessionListing { get; set; }
+
         protected Session(string room, DateTime startTime, DateTime endTime)
         {
             this.Room = room;
@@ -15,10 +17,9 @@ namespace protosched
             this.EndTime = endTime;
         }
 
-        // for a session that has equipment needs
-        protected Session(DateTime startTime, DateTime endTime)
+        public override string ToString()
         {
-
+            return SessionListing = Room + " " + "class session beginning at " + StartTime + " and ending at " + EndTime + " ";
         }
     }
 }

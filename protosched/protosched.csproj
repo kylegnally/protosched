@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EqSession.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="GenericQueue.cs" />
     <Compile Include="GenericStack.cs" />
