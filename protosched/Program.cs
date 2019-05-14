@@ -31,9 +31,9 @@ namespace protosched
             coll.Add("Visualizer1", "AWH209", "Visualizer 1", false);
             coll.Add("Visualizer2", "AWH207", "Visualizer 2", true);
             coll.Add("Visualizer3", "AWH208", "Visualizer 3", true);
-            coll.Add("Visualizer4", "AWH328", "Visualizer 3", false);
-            coll.Add("Visualizer5", "AWH306", "Visualizer 3", false);
-            coll.Add("Visualizer6", "AWH307", "Visualizer 3", false);
+            coll.Add("Visualizer4", "AWH328", "Visualizer 4", false);
+            coll.Add("Visualizer5", "AWH306", "Visualizer 5", false);
+            coll.Add("Visualizer6", "AWH307", "Visualizer 6", false);
             coll.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
             coll.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
             coll.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
@@ -53,7 +53,8 @@ namespace protosched
             sessColl.Add(
                 "AWH309", 
                 new DateTime(2019, 5, 9, 9, 0, 0),
-                new DateTime(2019, 5, 9, 11,45,0));
+                new DateTime(2019, 5, 9, 11,45,0),
+                new WhiteBoardEquipment("Whiteboard", "AWH208", null, false, false));
             sessColl.Add(
                 "AWH305",
                 new DateTime(2019, 5, 9, 11, 0, 0),

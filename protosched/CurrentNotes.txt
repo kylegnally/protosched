@@ -31,3 +31,8 @@ Note rather than a hardcoded Note. Note: the Note should be part of a Move and n
 5/8/2019, morning
 
 Start the Move class today. Also begin creating other grid-based interface.
+
+5/14/19, morning
+
+Completed move class. Abandon grid-based interface. Concentrate on the problem of not seeing the Visualizer6
+output when the program doesn't have a breakpoint set.
