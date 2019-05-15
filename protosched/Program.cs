@@ -2,7 +2,7 @@
 
 namespace protosched
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -12,33 +12,37 @@ namespace protosched
             equipmentColl.PrintTheInventory();
             Console.WriteLine();
             sessionColl.PrintTheClassroomSchedule();
+            Console.WriteLine();
             equipmentColl.PrintAStack("w");
+            equipmentColl.PrintAStack("v");
+            equipmentColl.PrintAStack("b");
+            equipmentColl.PrintAStack("m");
             Console.WriteLine("Done!");
         }
 
-        static void AddTestData(EquipmentCollection coll, SessionCollection sessColl)
+        static void AddTestData(EquipmentCollection eqColl, SessionCollection sessColl)
         {
             //string[] names = {"Mic", "Podium", "Amplifier"};
 
             // equipment collection test data (actual locations as of 5/9/19)
-            coll.Add("WOWCart1", "AWH328", "First WOW cart", true, 30);
-            coll.Add("WOWCart2", "AWH309", "Second WOW cart", true, 30);
-            coll.Add("WOWCart3", "AWH206", "Third WOW cart", false, 24);
-            coll.Add("Visualizer1", "AWH209", "Visualizer 1", false);
-            coll.Add("Visualizer2", "AWH207", "Visualizer 2", true);
-            coll.Add("Visualizer3", "AWH208", "Visualizer 3", true);
-            coll.Add("Visualizer4", "AWH328", "Visualizer 4", false);
-            coll.Add("Visualizer5", "AWH306", "Visualizer 5", false);
-            coll.Add("Visualizer6", "AWH307", "Visualizer 6", false);
-            coll.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
-            coll.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
-            coll.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
+            eqColl.Add("WOWCart1", "AWH328", "First WOW cart", true, 30);
+            eqColl.Add("WOWCart2", "AWH309", "Second WOW cart", true, 30);
+            eqColl.Add("WOWCart3", "AWH206", "Third WOW cart", false, 24);
+            eqColl.Add("Visualizer1", "AWH209", "Visualizer 1", false);
+            eqColl.Add("Visualizer2", "AWH207", "Visualizer 2", true);
+            eqColl.Add("Visualizer3", "AWH208", "Visualizer 3", true);
+            eqColl.Add("Visualizer4", "AWH328", "Visualizer 4", false);
+            eqColl.Add("Visualizer5", "AWH306", "Visualizer 5", false);
+            eqColl.Add("Visualizer6", "AWH307", "Visualizer 6", false);
+            eqColl.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
+            eqColl.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
+            eqColl.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
 
             // class session collection test data (actual data taken from Astra 5/9/19)
             sessColl.Add(
-                "AWH206", 
-                new DateTime(2019,5,9,9,0,0), 
-                new DateTime(2019, 5,9, 10,40,0));
+                "AWH206",
+                new DateTime(2019, 5, 9, 9, 0, 0),
+                new DateTime(2019, 5, 9, 10, 40, 0));
 
             // this is the only piece of equipment needed this day per the AV schedule
             sessColl.Add(
@@ -47,10 +51,10 @@ namespace protosched
                 new DateTime(2019, 5, 9, 11,45,0),
                 new VisualizerEquipment("Visualizer6", "AWH307", null, false));
             sessColl.Add(
-                "AWH309", 
+                "AWH309",
                 new DateTime(2019, 5, 9, 9, 0, 0),
-                new DateTime(2019, 5, 9, 11,45,0),
-                new WhiteBoardEquipment("Whiteboard", "AWH208", null, false, false));
+                new DateTime(2019, 5, 9, 11, 45, 0),
+                new WhiteBoardEquipment("Whiteboard", "AWH208", "Please erase", false, false));
             sessColl.Add(
                 "AWH305",
                 new DateTime(2019, 5, 9, 11, 0, 0),
