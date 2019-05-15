@@ -15,9 +15,9 @@
             string notes,
             bool isLocked) : base(equipmentName, currentRoom, notes)
         {
-            this.EquipmentName = equipmentName;
+            EquipmentName = equipmentName;
             this.isLocked = isLocked;
-            this.EquipmentNotes = notes;
+            EquipmentNotes = notes;
         }
 
         public override string ToString()

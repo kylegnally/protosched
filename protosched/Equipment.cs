@@ -10,9 +10,9 @@
 
         protected Equipment(string equipmentName, string currentRoom, string notes)
         {
-            this.EquipmentName = equipmentName;
-            this.CurrentRoom = currentRoom;
-            this.EquipmentNotes = notes;
+            EquipmentName = equipmentName;
+            CurrentRoom = currentRoom;
+            EquipmentNotes = notes;
         }
 
         public override string ToString()
