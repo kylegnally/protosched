@@ -123,13 +123,13 @@ namespace protosched
 
         public string PrintAStack(string stack)
         {
-            string bullshit = "";
+            string output = "";
             switch (stack)
             {
                 case "w":
                     while (!aWowStack.IsEmpty)
                     {
-                        bullshit += aWowStack.Pop().EquipmentListing + Environment.NewLine;
+                        output += aWowStack.Pop().EquipmentListing + Environment.NewLine;
                         aWowStack.Print();
                     }
                     break;
@@ -137,7 +137,7 @@ namespace protosched
                 case "v":
                     while (!aVisStack.IsEmpty)
                     {
-                        bullshit += aVisStack.Pop().EquipmentListing + Environment.NewLine;
+                        output += aVisStack.Pop().EquipmentListing + Environment.NewLine;
                         aVisStack.Print();
                     }
                     break;
@@ -145,7 +145,7 @@ namespace protosched
                 case "b":
                     while (!aBoardStack.IsEmpty)
                     {
-                        bullshit += aBoardStack.Pop().EquipmentListing + Environment.NewLine;
+                        output += aBoardStack.Pop().EquipmentListing + Environment.NewLine;
                         aBoardStack.Print();
                     }
                     break;
@@ -153,7 +153,7 @@ namespace protosched
                 case "m":
                     while (!aWowStack.IsEmpty)
                     {
-                        bullshit += aWowStack.Pop().EquipmentListing + Environment.NewLine;
+                        output += aWowStack.Pop().EquipmentListing + Environment.NewLine;
                         aMiscStack.Print();
                     }
                     break;
@@ -162,8 +162,8 @@ namespace protosched
 
             }
 
-            Console.WriteLine(bullshit);
-            return bullshit;
+            Console.WriteLine(output);
+            return output;
         }
     }
 }
