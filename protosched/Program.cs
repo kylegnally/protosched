@@ -17,7 +17,7 @@ namespace protosched
             equipmentColl.PrintAStack("v");
             equipmentColl.PrintAStack("b");
             equipmentColl.PrintAStack("m");
-            Console.WriteLine("Process complete!");
+            Console.WriteLine("Complete!");
         }
 
         static void AddTestData(EquipmentCollection eqColl, SessionCollection sessColl)
