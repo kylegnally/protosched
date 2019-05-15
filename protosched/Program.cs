@@ -2,7 +2,7 @@
 
 namespace protosched
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -50,10 +50,11 @@ namespace protosched
                 new DateTime(2019,5,9,9,0,0), 
                 new DateTime(2019, 5, 9, 11,45,0),
                 new VisualizerEquipment("Visualizer6", "AWH307", null, false));
-            //sessColl.Add(
-            //    "AWH309", 
-            //    new DateTime(2019, 5, 9, 9, 0, 0),
-            //    new DateTime(2019, 5, 9, 11,45,0));
+            sessColl.Add(
+                "AWH309",
+                new DateTime(2019, 5, 9, 9, 0, 0),
+                new DateTime(2019, 5, 9, 11, 45, 0),
+                new WhiteBoardEquipment("Whiteboard", "AWH208", "Please erase", false, false));
             //sessColl.Add(
             //    "AWH305",
             //    new DateTime(2019, 5, 9, 11, 0, 0),
