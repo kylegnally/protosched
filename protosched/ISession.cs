@@ -11,5 +11,6 @@ namespace protosched
         string Room { get; set; }
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
+        TimeSpan LengthInMinutes { get; set; }
     }
 }

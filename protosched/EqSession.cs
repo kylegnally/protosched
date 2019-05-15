@@ -12,6 +12,7 @@ namespace protosched
         private TimeSpan lengthInMinutes;
 
         public override string SessionListing { get; set; }
+        public override TimeSpan LengthInMinutes { get; set; }
 
         public EqSession(string room, DateTime startTime, DateTime endTime, IEquipment eqNeeded) : base(room, startTime, endTime)
         {
@@ -25,9 +26,7 @@ namespace protosched
         public override string ToString()
         {
             return base.ToString() +
-                   " with a length of " +
-                   lengthInMinutes.ToString() +
-                   " minutes requires " +
+                   " requires " +
                    eqNeeded.EquipmentName +
                    " by " +
                    this.StartTime.ToString() +

@@ -13,10 +13,10 @@ namespace protosched
             Console.WriteLine();
             sessionColl.PrintTheClassroomSchedule();
             Console.WriteLine();
-            equipmentColl.PrintAStack("w");
-            equipmentColl.PrintAStack("v");
-            equipmentColl.PrintAStack("b");
-            equipmentColl.PrintAStack("m");
+            //equipmentColl.PrintAStack("w");
+            //equipmentColl.PrintAStack("v");
+            //equipmentColl.PrintAStack("b");
+            //equipmentColl.PrintAStack("m");
             Console.WriteLine("Complete!");
         }
 

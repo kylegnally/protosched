@@ -9,6 +9,7 @@ namespace protosched
         public DateTime EndTime { get; set; }
 
         public abstract string SessionListing { get; set; }
+        public abstract TimeSpan LengthInMinutes { get; set; }
 
         protected Session(string room, DateTime startTime, DateTime endTime)
         {
@@ -24,7 +25,9 @@ namespace protosched
                                     "class session beginning at " + 
                                     StartTime + 
                                     " and ending at " + 
-                                    EndTime + " ";
+                                    EndTime +
+                                    " with a length of " +
+                                    LengthInMinutes.ToString();
         }
     }
 }
