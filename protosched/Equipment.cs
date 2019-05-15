@@ -15,9 +15,15 @@
             EquipmentNotes = notes;
         }
 
+        //public override string ToString()
+        //{
+        //    EquipmentListing = EquipmentName + " located in " + CurrentRoom + " NOTES: " + EquipmentNotes;
+        //    return EquipmentListing;
+        //}
+
         public override string ToString()
         {
-            EquipmentListing = EquipmentName + " located in " + CurrentRoom + " NOTES: " + EquipmentNotes;
+            EquipmentListing = EquipmentName + " located in " + CurrentRoom;
             return EquipmentListing;
         }
     }

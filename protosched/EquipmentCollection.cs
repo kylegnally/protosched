@@ -9,35 +9,11 @@ namespace protosched
         private int pieces;
         private int collectionPosition;
 
-        // generic stacks for each move type
-        GenericStack<IEquipment> aWowStack = new GenericStack<IEquipment>();
-        GenericStack<IEquipment> aVisStack = new GenericStack<IEquipment>();
-        GenericStack<IEquipment> aBoardStack = new GenericStack<IEquipment>();
-        GenericStack<IEquipment> aMiscStack = new GenericStack<IEquipment>();
+        public GenericStack<IEquipment> WowStack { get; set; } = new GenericStack<IEquipment>();
+        public GenericStack<IEquipment> VisStack { get; set; } = new GenericStack<IEquipment>();
+        public GenericStack<IEquipment> BoardStack { get; set; } = new GenericStack<IEquipment>();
+        public GenericStack<IEquipment> MiscStack { get; set; } = new GenericStack<IEquipment>();
 
-        public GenericStack<IEquipment> WowStack
-        {
-            get => aWowStack;
-            set => aWowStack = value;
-        }
-
-        public GenericStack<IEquipment> VisStack
-        {
-            get => aVisStack;
-            set => aVisStack = value;
-        }
-
-        public GenericStack<IEquipment> BoardStack
-        {
-            get => aBoardStack;
-            set => aBoardStack = value;
-        }
-
-        public GenericStack<IEquipment> MiscStack
-        {
-            get => aMiscStack;
-            set => aMiscStack = value;
-        }
         public EquipmentCollection()
         {
             equipment = new IEquipment[100];
@@ -53,7 +29,7 @@ namespace protosched
             int numLaptops)
         {
             equipment[collectionPosition] = new WowCartEquipment(equipmentName, currentRoom, notes, hasPrinter, numLaptops);
-            aWowStack.Push(equipment[collectionPosition]);
+            WowStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -65,7 +41,7 @@ namespace protosched
             bool isLocked)
         {
             equipment[collectionPosition] = new VisualizerEquipment(equipmentName, currentRoom, notes, isLocked);
-            aVisStack.Push(equipment[collectionPosition]);
+            VisStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -78,7 +54,7 @@ namespace protosched
             bool hasEraser)
         {
             equipment[collectionPosition] = new WhiteBoardEquipment(equipmentName, currentRoom, notes, hasMarker, hasEraser);
-            aBoardStack.Push(equipment[collectionPosition]);
+            BoardStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -91,7 +67,7 @@ namespace protosched
             string[] pieceNames*/)
         {
             equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment/*, pieceNames*/);
-            aMiscStack.Push(equipment[collectionPosition]);
+            MiscStack.Push(equipment[collectionPosition]);
             collectionPosition++;
         }
 
@@ -127,34 +103,34 @@ namespace protosched
             switch (stack)
             {
                 case "w":
-                    while (!aWowStack.IsEmpty)
+                    while (!WowStack.IsEmpty)
                     {
-                        output += aWowStack.Pop().EquipmentListing + Environment.NewLine;
-                        aWowStack.Print();
+                        output += WowStack.Pop().EquipmentListing + Environment.NewLine;
+                        WowStack.Print();
                     }
                     break;
 
                 case "v":
-                    while (!aVisStack.IsEmpty)
+                    while (!VisStack.IsEmpty)
                     {
-                        output += aVisStack.Pop().EquipmentListing + Environment.NewLine;
-                        aVisStack.Print();
+                        output += VisStack.Pop().EquipmentListing + Environment.NewLine;
+                        VisStack.Print();
                     }
                     break;
 
                 case "b":
-                    while (!aBoardStack.IsEmpty)
+                    while (!BoardStack.IsEmpty)
                     {
-                        output += aBoardStack.Pop().EquipmentListing + Environment.NewLine;
-                        aBoardStack.Print();
+                        output += BoardStack.Pop().EquipmentListing + Environment.NewLine;
+                        BoardStack.Print();
                     }
                     break;
 
                 case "m":
-                    while (!aWowStack.IsEmpty)
+                    while (!WowStack.IsEmpty)
                     {
-                        output += aWowStack.Pop().EquipmentListing + Environment.NewLine;
-                        aMiscStack.Print();
+                        output += WowStack.Pop().EquipmentListing + Environment.NewLine;
+                        MiscStack.Print();
                     }
                     break;
                 default:

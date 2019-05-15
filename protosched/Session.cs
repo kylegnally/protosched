@@ -19,7 +19,12 @@ namespace protosched
 
         public override string ToString()
         {
-            return SessionListing = Room + " " + "class session beginning at " + StartTime + " and ending at " + EndTime + " ";
+            return SessionListing = Room + 
+                                    " " + 
+                                    "class session beginning at " + 
+                                    StartTime + 
+                                    " and ending at " + 
+                                    EndTime + " ";
         }
     }
 }

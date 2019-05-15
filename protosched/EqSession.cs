@@ -24,13 +24,15 @@ namespace protosched
 
         public override string ToString()
         {
-            return base.ToString() + 
-                   " with a length of " + 
-                   lengthInMinutes.ToString() + 
+            return base.ToString() +
+                   " with a length of " +
+                   lengthInMinutes.ToString() +
                    " minutes requires " +
-                   eqNeeded + 
-                   " by " + 
-                   this.StartTime.ToString();
+                   eqNeeded.EquipmentName +
+                   " by " +
+                   this.StartTime.ToString() +
+                   " ** NOTES: " +
+                   eqNeeded.EquipmentNotes;
         }
     }
 }
