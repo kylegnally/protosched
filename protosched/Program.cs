@@ -35,8 +35,8 @@ namespace protosched
             eqColl.Add("Visualizer5", "AWH306", "Visualizer 5", false);
             eqColl.Add("Visualizer6", "AWH307", "Visualizer 6", false);
             eqColl.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
-            eqColl.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
-            eqColl.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
+            eqColl.Add("Whiteboard1", "AWH208", "Whiteboard #1", false, false);
+            eqColl.Add("Whiteboard2", "AWH205", "Whiteboard #2", true, true);
 
             // class session collection test data (actual data taken from Astra 5/9/19)
             sessColl.Add(
@@ -49,7 +49,7 @@ namespace protosched
                 "AWH304", 
                 new DateTime(2019,5,9,9,0,0), 
                 new DateTime(2019, 5, 9, 11,45,0),
-                new VisualizerEquipment("Visualizer6", "AWH307", null, false));
+                new VisualizerEquipment("Visualizer6", "AWH307", "Don't care about this class", false));
             sessColl.Add(
                 "AWH309",
                 new DateTime(2019, 5, 9, 9, 0, 0),

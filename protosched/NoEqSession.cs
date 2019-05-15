@@ -17,9 +17,9 @@ namespace protosched
             this.EndTime = endTime;
         }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        //public override string ToString()
+        //{
+        //    return base.ToString();
+        //}
     }
 }
