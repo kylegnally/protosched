@@ -9,7 +9,6 @@ namespace protosched
     class EqSession : Session
     {
         private IEquipment eqNeeded;
-        private TimeSpan lengthInMinutes;
 
         public override string SessionListing { get; set; }
         public override TimeSpan LengthInMinutes { get; set; }
@@ -20,7 +19,12 @@ namespace protosched
             this.StartTime = startTime;
             this.EndTime = endTime;
             this.eqNeeded = eqNeeded;
-            this.lengthInMinutes = endTime - startTime;
+            GetTimeSpan();
+        }
+
+        private void GetTimeSpan()
+        {
+            this.LengthInMinutes = EndTime - StartTime;
         }
 
         public override string ToString()

@@ -16,7 +16,12 @@ namespace protosched
             this.Room = room;
             this.StartTime = startTime;
             this.EndTime = endTime;
-            this.LengthInMinutes = endTime - startTime;
+            GetTimeSpan();
+        }
+
+        private void GetTimeSpan()
+        {
+            this.LengthInMinutes = EndTime - StartTime;
         }
 
         public override string ToString()
