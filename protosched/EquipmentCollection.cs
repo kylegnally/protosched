@@ -9,6 +9,8 @@ namespace protosched
         private int pieces;
         private int collectionPosition;
 
+        public IEquipment[] AllEquipment { get; set; }
+
         public GenericStack<IEquipment> WowStack { get; set; } = new GenericStack<IEquipment>();
         public GenericStack<IEquipment> VisStack { get; set; } = new GenericStack<IEquipment>();
         public GenericStack<IEquipment> BoardStack { get; set; } = new GenericStack<IEquipment>();
@@ -30,6 +32,7 @@ namespace protosched
         {
             equipment[collectionPosition] = new WowCartEquipment(equipmentName, currentRoom, notes, hasPrinter, numLaptops);
             WowStack.Push(equipment[collectionPosition]);
+            //AllEquipment[collectionPosition] = equipment[collectionPosition];
             collectionPosition++;
         }
 
@@ -42,6 +45,7 @@ namespace protosched
         {
             equipment[collectionPosition] = new VisualizerEquipment(equipmentName, currentRoom, notes, isLocked);
             VisStack.Push(equipment[collectionPosition]);
+            //AllEquipment[collectionPosition] = equipment[collectionPosition];
             collectionPosition++;
         }
 
@@ -55,6 +59,7 @@ namespace protosched
         {
             equipment[collectionPosition] = new WhiteBoardEquipment(equipmentName, currentRoom, notes, hasMarker, hasEraser);
             BoardStack.Push(equipment[collectionPosition]);
+            //AllEquipment[collectionPosition] = equipment[collectionPosition];
             collectionPosition++;
         }
 
@@ -68,6 +73,7 @@ namespace protosched
         {
             equipment[collectionPosition] = new MiscEquipment(equipmentName, currentRoom, notes, piecesOfEquipment/*, pieceNames*/);
             MiscStack.Push(equipment[collectionPosition]);
+            //AllEquipment[collectionPosition] = equipment[collectionPosition];
             collectionPosition++;
         }
 

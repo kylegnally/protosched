@@ -11,12 +11,15 @@ namespace protosched
         private ISession[] sessions;
         private int collectionPosition;
 
+        public ISession[] AllSessions { get; set; }
+
         GenericStack<ISession> aSessionWithoutEquipmentStack = new GenericStack<ISession>();
         GenericStack<ISession> aSessionWithEquipmentStack = new GenericStack<ISession>();
 
         public SessionCollection()
         {
             sessions = new ISession[100];
+            AllSessions = new ISession[100];
             collectionPosition = 0;
         }
 
@@ -24,6 +27,7 @@ namespace protosched
         {
             sessions[collectionPosition] = new NoEqSession(roomNumber, startTime, endTime);
             aSessionWithoutEquipmentStack.Push(sessions[collectionPosition]);
+            AllSessions[collectionPosition] = sessions[collectionPosition];
             collectionPosition++;
         }
 
@@ -31,6 +35,7 @@ namespace protosched
         {
             sessions[collectionPosition] = new EqSession(roomNumber, startTime, endTime, equipment);
             aSessionWithEquipmentStack.Push(sessions[collectionPosition]);
+            AllSessions[collectionPosition] = sessions[collectionPosition];
             collectionPosition++;
         }
 

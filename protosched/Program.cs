@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 
 namespace protosched
 {
@@ -17,6 +18,7 @@ namespace protosched
             //equipmentColl.PrintAStack("v");
             //equipmentColl.PrintAStack("b");
             //equipmentColl.PrintAStack("m");
+            PreparePossibleMoves(equipmentColl, sessionColl);
             Console.WriteLine("Complete!");
         }
 
@@ -49,7 +51,7 @@ namespace protosched
                 "AWH304", 
                 new DateTime(2019,5,9,9,0,0), 
                 new DateTime(2019, 5, 9, 11,45,0),
-                new VisualizerEquipment("Visualizer6", "AWH307", "Don't care about this class", false));
+                new VisualizerEquipment("Visualizer", "AWH307", "Don't care about this class", false));
             sessColl.Add(
                 "AWH309",
                 new DateTime(2019, 5, 9, 9, 0, 0),
@@ -58,7 +60,8 @@ namespace protosched
             sessColl.Add(
                 "AWH305",
                 new DateTime(2019, 5, 9, 11, 0, 0),
-                new DateTime(2019, 5, 9, 12, 40, 0));
+                new DateTime(2019, 5, 9, 12, 40, 0),
+                new WowCartEquipment("WOWCart", "AWH206", "need one laptop in a broken state (software)", false, 24));
             sessColl.Add(
                 "AWH308",
                 new DateTime(2019, 5, 9, 12, 0, 0),
@@ -95,6 +98,17 @@ namespace protosched
                 "AWH307",
                 new DateTime(2019, 5, 9, 18, 0, 0),
                 new DateTime(2019, 5, 9, 19, 45, 0));
+        }
+
+        static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
+        {
+            // I'm not sure if this is even possible, but in this method we're going to pull
+            // out the relevant requirements from the session collection and see if there's 
+            // a match to each piece of equipment in the equipment collection.
+
+            // Since they are each essentially collections of collections I'm not sure if it's
+            // possible at all. Perhaps a JSON would be more appropriate? A database? This
+            // require some thought.
         }
     }
 }
