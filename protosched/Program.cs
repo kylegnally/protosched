@@ -102,13 +102,7 @@ namespace protosched
 
         static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
         {
-            // I'm not sure if this is even possible, but in this method we're going to pull
-            // out the relevant requirements from the session collection and see if there's 
-            // a match to each piece of equipment in the equipment collection.
-
-            // Since they are each essentially collections of collections I'm not sure if it's
-            // possible at all. Perhaps a JSON would be more appropriate? A database? This
-            // require some thought.
+            //if (eqColl.BoardStack.Pop().EquipmentName == sessColl.SessionWithEquipment.Pop().)
         }
     }
 }
