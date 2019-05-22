@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Runtime.ConstrainedExecution;
 
 namespace protosched
@@ -103,6 +104,15 @@ namespace protosched
         static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
         {
             //if (eqColl.BoardStack.Pop().EquipmentName == sessColl.SessionWithEquipment.Pop().)
+
+            string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+            string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+            string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+            string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+
+            //string sessWithEqName = sessColl.SessionWithEquipment.Pop().;
+            //string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().;
+
         }
     }
 }

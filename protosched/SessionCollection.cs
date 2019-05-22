@@ -31,7 +31,7 @@ namespace protosched
             collectionPosition++;
         }
 
-        public void Add(string roomNumber, DateTime startTime, DateTime endTime, Equipment equipment)
+        public void Add(string roomNumber, DateTime startTime, DateTime endTime, IEquipment equipment)
         {
             sessions[collectionPosition] = new EqSession(roomNumber, startTime, endTime, equipment);
             SessionWithEquipment.Push(sessions[collectionPosition]);
