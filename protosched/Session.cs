@@ -27,8 +27,7 @@ namespace protosched
                                     " and ending at " + 
                                     EndTime +
                                     " with a length of " +
-                                    LengthInMinutes.TotalMinutes + 
-                                    " minutes ";
+                                    LengthInMinutes.ToString();
         }
     }
 }

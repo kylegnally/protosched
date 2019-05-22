@@ -34,7 +34,7 @@ namespace protosched
                    " requires " +
                    EquipmentNeeded.EquipmentName +
                    " by " +
-                   this.StartTime +
+                   this.StartTime.ToString() +
                    " ** NOTES: " +
                    EquipmentNeeded.EquipmentNotes;
         }

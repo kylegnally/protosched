@@ -110,6 +110,12 @@ namespace protosched
             string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
             string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
+            /* We are only concerning ourselves with sessions that require equipment in this
+            /// program, so why create two classes derived from Session that you have to deal
+            /// with? ISession is needed, but maybe it's a better idea to just create ONE
+            /// Session, and let it do a null check for IEquipment. If it is null, just replace
+            /// it with a string and be done. */
+
             //string sessWithEqName = sessColl.SessionWithEquipment.Pop().;
             //string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().;
 
