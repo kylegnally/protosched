@@ -19,6 +19,7 @@ namespace protosched
         public EquipmentCollection()
         {
             equipment = new IEquipment[100];
+            AllEquipment = new IEquipment[100];
             collectionPosition = 0;
         }
         
@@ -32,7 +33,7 @@ namespace protosched
         {
             equipment[collectionPosition] = new WowCartEquipment(equipmentName, currentRoom, notes, hasPrinter, numLaptops);
             WowStack.Push(equipment[collectionPosition]);
-            //AllEquipment[collectionPosition] = equipment[collectionPosition];
+            AllEquipment[collectionPosition] = equipment[collectionPosition];
             collectionPosition++;
         }
 

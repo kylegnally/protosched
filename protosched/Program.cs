@@ -19,7 +19,8 @@ namespace protosched
             //equipmentColl.PrintAStack("v");
             //equipmentColl.PrintAStack("b");
             //equipmentColl.PrintAStack("m");
-            PreparePossibleMoves(equipmentColl, sessionColl);
+            //PreparePossibleMoves(equipmentColl, sessionColl);
+            
             Console.WriteLine("Complete!");
         }
 
@@ -106,16 +107,16 @@ namespace protosched
         /// we will be using these stacks (finally!!!) to populate the names of the equipment
         /// in the Unity-based GUI.
         /// 
-        static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
-        {
-            string eqWowName = eqColl.WowStack.Pop().EquipmentName;
-            string eqVisName = eqColl.VisStack.Pop().EquipmentName;
-            string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
-            string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+        //static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
+        //{
+        //    string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+        //    string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+        //    string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+        //    string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
-            string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
-            string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
+        //    string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
+        //    string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
 
-        }
+        //}
     }
 }
