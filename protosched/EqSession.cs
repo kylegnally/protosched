@@ -12,7 +12,7 @@ namespace protosched
 
         public override string SessionListing { get; set; }
         public override TimeSpan LengthInMinutes { get; set; }
-        public string EquipmentNeeded { get; set; }
+        public override string EquipmentNeeded { get; set; }
         public string EquipmentNotes { get; set; }
 
         public EqSession(string room, DateTime startTime, DateTime endTime, IEquipment eqNeeded) : base(room, startTime, endTime)
@@ -20,9 +20,14 @@ namespace protosched
             this.Room = room;
             this.StartTime = startTime;
             this.EndTime = endTime;
-            this.EquipmentNeeded = eqNeeded.EquipmentName;
             this.EquipmentNotes = eqNeeded.EquipmentNotes;
             GetTimeSpan();
+            GetEquipmentNeeded(eqNeeded);
+        }
+
+        private void GetEquipmentNeeded(IEquipment equipment)
+        {
+            this.EquipmentNeeded = equipment.EquipmentName;
         }
 
         private void GetTimeSpan()

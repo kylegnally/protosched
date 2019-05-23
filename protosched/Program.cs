@@ -19,7 +19,7 @@ namespace protosched
             //equipmentColl.PrintAStack("v");
             //equipmentColl.PrintAStack("b");
             //equipmentColl.PrintAStack("m");
-            PreparePossibleMoves(equipmentColl, sessionColl);
+            //PreparePossibleMoves(equipmentColl, sessionColl);
             Console.WriteLine("Complete!");
         }
 
@@ -101,24 +101,16 @@ namespace protosched
                 new DateTime(2019, 5, 9, 19, 45, 0));
         }
 
-        static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
-        {
-            //if (eqColl.BoardStack.Pop().EquipmentName == sessColl.SessionWithEquipment.Pop().)
+        //static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
+        //{
+        //    string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+        //    string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+        //    string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+        //    string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
-            string eqWowName = eqColl.WowStack.Pop().EquipmentName;
-            string eqVisName = eqColl.VisStack.Pop().EquipmentName;
-            string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
-            string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+        //    string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
+        //    string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
 
-            /* We are only concerning ourselves with sessions that require equipment in this
-            /// program, so why create two classes derived from Session that you have to deal
-            /// with? ISession is needed, but maybe it's a better idea to just create ONE
-            /// Session, and let it do a null check for IEquipment. If it is null, just replace
-            /// it with a string and be done. */
-
-            //string sessWithEqName = sessColl.SessionWithEquipment.Pop().;
-            //string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().;
-
-        }
+        //}
     }
 }

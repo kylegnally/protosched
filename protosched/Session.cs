@@ -9,6 +9,7 @@ namespace protosched
         public DateTime EndTime { get; set; }
 
         public abstract string SessionListing { get; set; }
+        public abstract string EquipmentNeeded { get; set; }
         public abstract TimeSpan LengthInMinutes { get; set; }
 
         protected Session(string room, DateTime startTime, DateTime endTime)

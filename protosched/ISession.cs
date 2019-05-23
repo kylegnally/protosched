@@ -11,6 +11,8 @@ namespace protosched
         string Room { get; set; }
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
+        string SessionListing { get; set; }
+        string EquipmentNeeded { get; set; }
         TimeSpan LengthInMinutes { get; set; }
     }
 }
