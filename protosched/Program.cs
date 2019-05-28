@@ -19,7 +19,7 @@ namespace protosched
             //equipmentColl.PrintAStack("v");
             //equipmentColl.PrintAStack("b");
             //equipmentColl.PrintAStack("m");
-            //PreparePossibleMoves(equipmentColl, sessionColl);
+            PreparePossibleMoves(equipmentColl, sessionColl);
             
             Console.WriteLine("Complete!");
         }
@@ -29,18 +29,18 @@ namespace protosched
             //string[] names = {"Mic", "Podium", "Amplifier"};
 
             // equipment collection test data (actual locations as of 5/9/19)
-            eqColl.Add("WOWCart1", "AWH328", "First WOW cart", true, 30);
-            eqColl.Add("WOWCart2", "AWH309", "Second WOW cart", true, 30);
-            eqColl.Add("WOWCart3", "AWH206", "Third WOW cart", false, 24);
-            eqColl.Add("Visualizer1", "AWH209", "Visualizer 1", false);
-            eqColl.Add("Visualizer2", "AWH207", "Visualizer 2", true);
-            eqColl.Add("Visualizer3", "AWH208", "Visualizer 3", true);
-            eqColl.Add("Visualizer4", "AWH328", "Visualizer 4", false);
-            eqColl.Add("Visualizer5", "AWH306", "Visualizer 5", false);
-            eqColl.Add("Visualizer6", "AWH307", "Visualizer 6", false);
+            eqColl.Add("WOWCart", "AWH328", "First WOW cart", true, 30);
+            eqColl.Add("WOWCart", "AWH309", "Second WOW cart", true, 30);
+            eqColl.Add("WOWCart", "AWH206", "Third WOW cart", false, 24);
+            eqColl.Add("Visualizer", "AWH209", "Visualizer 1", false);
+            eqColl.Add("Visualizer", "AWH207", "Visualizer 2", true);
+            eqColl.Add("Visualizer", "AWH208", "Visualizer 3", true);
+            eqColl.Add("Visualizer", "AWH328", "Visualizer 4", false);
+            eqColl.Add("Visualizer", "AWH306", "Visualizer 5", false);
+            eqColl.Add("Visualizer", "AWH307", "Visualizer 6", false);
             eqColl.Add("Misc", "AWH128", "Miscellaneous", 3/*, names*/);
-            eqColl.Add("Whiteboard1", "AWH208", "Whiteboard #1", false, false);
-            eqColl.Add("Whiteboard2", "AWH205", "Whiteboard #2", true, true);
+            eqColl.Add("Whiteboard", "AWH208", "Whiteboard #1", false, false);
+            eqColl.Add("Whiteboard", "AWH205", "Whiteboard #2", true, true);
 
             // class session collection test data (actual data taken from Astra 5/9/19)
             sessColl.Add(
@@ -106,17 +106,40 @@ namespace protosched
         /// pull the equipment name from the equipment stacks. This is important for later, as
         /// we will be using these stacks (finally!!!) to populate the names of the equipment
         /// in the Unity-based GUI.
-        /// 
-        //static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
-        //{
-        //    string eqWowName = eqColl.WowStack.Pop().EquipmentName;
-        //    string eqVisName = eqColl.VisStack.Pop().EquipmentName;
-        //    string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
-        //    string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+        ///
+        /// This will need to be in a loop that can iterate through each session in the collection.
+        static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
+        {
+            string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+            string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+            string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+            string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
-        //    string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
-        //    string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
+            string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
+            string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
 
-        //}
+            string comparedNeedHave = null;
+
+            comparedNeedHave = CompareNeedsAndHaves(eqWowName, eqVisName, eqBoardName, eqMiscName, sessWithEqName);
+
+            if (comparedNeedHave == null) Console.WriteLine("No equipment match!!");
+
+            else Console.WriteLine("\nSession " + 
+                                   sessWithEqName + 
+                                   " will receive a " + 
+                                   comparedNeedHave + 
+                                   ".");
+
+        }
+
+        private static string CompareNeedsAndHaves(string wowName, string visName, string boardName, string miscName, string sessionNeeds)
+        {
+            if (wowName == sessionNeeds) return wowName;
+            if (visName == sessionNeeds) return visName;
+            if (boardName == sessionNeeds) return boardName;
+            if (miscName == sessionNeeds) return miscName;
+
+            return null;
+        }
     }
 }
