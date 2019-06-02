@@ -110,25 +110,28 @@ namespace protosched
         /// This will need to be in a loop that can iterate through each session in the collection.
         static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
         {
-            string eqWowName = eqColl.WowStack.Pop().EquipmentName;
-            string eqVisName = eqColl.VisStack.Pop().EquipmentName;
-            string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
-            string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+            while (sessColl != null)
+            {
+                string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+                string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+                string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+                string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
-            string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
-            string sessWithoutEqName = sessColl.SessionWithoutEquipment.Pop().EquipmentNeeded;
+                string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
 
-            string comparedNeedHave = null;
+                string comparedNeedHave = null;
 
-            comparedNeedHave = CompareNeedsAndHaves(eqWowName, eqVisName, eqBoardName, eqMiscName, sessWithEqName);
+                comparedNeedHave = CompareNeedsAndHaves(eqWowName, eqVisName, eqBoardName, eqMiscName, sessWithEqName);
 
-            if (comparedNeedHave == null) Console.WriteLine("No equipment match!!");
+                if (comparedNeedHave == null) Console.WriteLine("No equipment match!!");
 
-            else Console.WriteLine("\nSession " + 
-                                   sessWithEqName + 
-                                   " will receive a " + 
-                                   comparedNeedHave + 
-                                   ".");
+                else Console.WriteLine("\nSession " +
+                                       sessWithEqName +
+                                       " will receive a " +
+                                       comparedNeedHave +
+                                       ".");
+                sessColl.SessionWithEquipment.Pop();
+            }
 
         }
 

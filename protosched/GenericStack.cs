@@ -63,7 +63,8 @@ namespace protosched
             // if empty, burp
             if (IsEmpty)
             {
-                throw new Exception("List is empty");
+                //throw new Exception("List is empty");
+                Console.WriteLine("List is empty.");
             }
 
             // set a generic returnData equal to the Data property of head
