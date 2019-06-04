@@ -19,9 +19,14 @@ namespace protosched
             //equipmentColl.PrintAStack("v");
             //equipmentColl.PrintAStack("b");
             //equipmentColl.PrintAStack("m");
-            PreparePossibleMoves(equipmentColl, sessionColl);
-            
-            Console.WriteLine("Complete!");
+            int sessionsRemaining = sessionColl.AllSessions.Length;
+
+            //for (int i = 0; i < sessionsRemaining; i++)
+            //{
+            //    PreparePossibleMoves(equipmentColl, sessionColl);
+            //}
+
+            //Console.WriteLine("Complete!");
         }
 
         static void AddTestData(EquipmentCollection eqColl, SessionCollection sessColl)
@@ -108,41 +113,38 @@ namespace protosched
         /// in the Unity-based GUI.
         ///
         /// This will need to be in a loop that can iterate through each session in the collection.
-        static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
-        {
-            while (sessColl != null)
-            {
-                string eqWowName = eqColl.WowStack.Pop().EquipmentName;
-                string eqVisName = eqColl.VisStack.Pop().EquipmentName;
-                string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
-                string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
+        //static void PreparePossibleMoves(EquipmentCollection eqColl, SessionCollection sessColl)
+        //{
+            
+        //    string eqWowName = eqColl.WowStack.Pop().EquipmentName;
+        //    string eqVisName = eqColl.VisStack.Pop().EquipmentName;
+        //    string eqBoardName = eqColl.BoardStack.Pop().EquipmentName;
+        //    string eqMiscName = eqColl.MiscStack.Pop().EquipmentName;
 
-                string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
+        //    string sessWithEqName = sessColl.SessionWithEquipment.Pop().EquipmentNeeded;
 
-                string comparedNeedHave = null;
+        //    string comparedNeedHave = null;
 
-                comparedNeedHave = CompareNeedsAndHaves(eqWowName, eqVisName, eqBoardName, eqMiscName, sessWithEqName);
+        //    comparedNeedHave = CompareNeedsAndHaves(eqWowName, eqVisName, eqBoardName, eqMiscName, sessWithEqName);
 
-                if (comparedNeedHave == null) Console.WriteLine("No equipment match!!");
+        //    if (comparedNeedHave == null) Console.WriteLine("No equipment match!!");
 
-                else Console.WriteLine("\nSession " +
-                                       sessWithEqName +
-                                       " will receive a " +
-                                       comparedNeedHave +
-                                       ".");
-                sessColl.SessionWithEquipment.Pop();
-            }
+        //    else Console.WriteLine("\nSession " +
+        //                           sessWithEqName +
+        //                           " will receive a " +
+        //                           comparedNeedHave +
+        //                           ".");
+        //    sessColl.SessionWithEquipment.Pop();
+        //}
 
-        }
+        //private static string CompareNeedsAndHaves(string wowName, string visName, string boardName, string miscName, string sessionNeeds)
+        //{
+        //    if (wowName == sessionNeeds) return wowName;
+        //    if (visName == sessionNeeds) return visName;
+        //    if (boardName == sessionNeeds) return boardName;
+        //    if (miscName == sessionNeeds) return miscName;
 
-        private static string CompareNeedsAndHaves(string wowName, string visName, string boardName, string miscName, string sessionNeeds)
-        {
-            if (wowName == sessionNeeds) return wowName;
-            if (visName == sessionNeeds) return visName;
-            if (boardName == sessionNeeds) return boardName;
-            if (miscName == sessionNeeds) return miscName;
-
-            return null;
-        }
+        //    return null;
+        //}
     }
 }
